@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>MaTero - M&oacute;dulos Publicar</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="modulos_publicar.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="500" align="center" cellspacing="2">
+          <tr class="tabla_titulo"> 
+            <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Listado 
+                de M&oacute;dulos a Publicar</b></font></div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td align="center"> <table width="97%" class="tabla_cuerpo">
+                <tr> 
+                  <td height="22"> <div align="center"><strong>M&oacute;dulo</strong></div></td>
+                  <td> <div align="center"><strong>Publicar</strong></div></td>
+                </tr>
+                <!-- BEGIN profe -->
+                <tr> 
+                  <td><div align="center">{titulo}</div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="vf_publi_{idm}" value="1" {check}>
+                    </div></td>
+                </tr>
+                <!-- END profe -->
+                <tr> 
+                  <td><div align="center"> </div></td>
+                  <td><div align="center"> 
+                      <input name="publiar" type="submit" id="publiar"  class="boton" value="Publicar">
+                    </div></td>
+                </tr>
+              </table> </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="28">
+<div align="center">
+<input name="vf_redirigir" type="submit" id="vf_redirigir2"  class="boton" value="Volver">
+                <input name="vf_donde_redirigir" type="hidden" id="vf_donde_redirigir2" value="menu.php?">
+                <input name="menu" type="hidden" id="menu" value="1">
+              </div>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo">
+            <td><div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

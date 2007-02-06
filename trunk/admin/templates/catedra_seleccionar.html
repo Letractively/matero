@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>MaTero - Admin</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<script language="JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+</head>
+<body>
+<br>
+<!-- BEGIN bloque_logueo -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right"></div>
+      <form name="form1" method="post" action="">
+        <table width="400"  cellspacing="2" align="center">
+          <tr class="cat_tabla_titulo"> 
+            <td  colspan="2"  align="center"> <strong>Seleccionar C&aacute;tedra</strong></td>
+          </tr>
+          <tr> 
+            <td class="tabla_cuerpo" > 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td class="cat_tabla_cuerpo" width="35%">&nbsp;</td>
+                  <td class="cat_tabla_cuerpo" width="65%">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td class="cat_tabla_cuerpo" colspan="2"> 
+                    <div align="center">
+                      <select class="lista_desplegable_catedra" name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+                        <option selected>Seleccionar c&aacute;tedra</option>
+                        <!-- BEGIN bloque_catedra -->
+                        <option value="catedra_hacer_seleccionar.php?PHPSESSID={PHPSESSID}&idc={idc}">{nombre}</option>
+                        <!-- END bloque_catedra -->
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td class="cat_tabla_cuerpo" colspan="2" height="11"> 
+                    <div align="center"><br>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td class="cat_tabla_cuerpo" colspan="2" height="11">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td class="firma" height="18"> 
+              <div align="center">{firma}</div>
+            </td>
+          </tr>
+        </table>
+        <br>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- END bloque_logueo -->
+</body>
+</html>

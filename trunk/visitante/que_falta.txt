@@ -1,0 +1,102 @@
+Falta:
+
+Cosas para hacer cuando lleve todo a la facu:
+- En el script error_grave.php cambiar el argumento del header por el de la pagina en el sitio
+
+
+Ver que esta repetido en id_catedra en biblio y en tipo_biblio. Lo mismo con los links.
+Ver si esta mostrando bien todo los objetivos, ver como es el tema para mostrar la imagen. Lo mismo en objetivos. Lo mismo para los apuntes
+La posicion de los profesores, sirve para el orden de mostrarlos?->si
+
+Con el tema de las variables que se pasan por get... Como hago para saber si viene la variable o no? porque el isset no me lo toma, y el empty tampoco... resolverlo ---> creo que se arreglo sin querer queriendo
+
+A las fechas del admin hay que pasarlas con la funcion convertir_fecha()
+
+No anda cuando quiero subir archivos en los apuntes. ->hecho
+
+En el admin falta la funcion que maneje el publicar apunte
+
+En el admin se pueden dar de alta apuntes sin atachar el archivo. Es posible un apunte sin archivo?
+
+Cual era la comision activa? Ver para cuando muestro las comisiones en la pagina de los parciales
+
+Hay que darle un varchar mas grande al campo comentario de la tabla trabajo_practico_notas
+
+
+Por comision:
+- Parciales
+- TPS (faltan las tablas)
+
+ATENCION!!!!! ver en las consultas SQL, que hay que poner los publicar='1' y no publicar=1 cuando el campo es de tipo ENUM, si es de tipo TINYINT dejarlo como esta. Aunque lo mejor seria unificar todo.
+
+
+Lucas ha dicho:
+si necesitas ayuda con la visualización avisa, acordate de que tiene que quedar con el diseño gráfico de académica y con la misma estuctura de menúes del sitio
+
+El error.html hay que modificarlo ---> hecho
+
+El campo descrip de trabajos_practicos: es el campo que se usa de comentario cuando se muestran las notas? o que es? Por ahora yo lo tome como el campo usado cuando se ven las notas. Si es otra cosa, faltaria dicho campo.
+
+
+Ver de poner una seccion inicio o algo por el estilo, por si no hay cargadas novedades. --> hecho
+
+Falta probar el tema de los trabajos practicos
+
+
+---------------
+
+ver en el bajar apuntes, bajar etc, bajar etc, el tema de validar que esten publicados los items ---> hecho
+
+Ver los paths donde se guardan las cosas de las catedras que aparentemente estan seteadas en el configuracion.php ---> hecho
+
+
+
+
+
+
+Dudas y consultas para que Guido vaya viendo...
+
+- Cuando siendo el administrdor del Matero, doy de alta una catedra, me pide un email. ¿Ese email es solo para que el administrador sepa como contactarlo o es un email para que los alumnos puedan enviar algo? Dependiendo de tu respuesta lo tengo que mostrar en la visualizacion de la catedra o no. Tambien tene en cuenta que ese mail esta siendo obligatorio, por lo tanto en la pagina apareceria SIEMPRE el mail para contactarse, incluso si la gente de la catedra no lo quisiese.
+
+- Me cree un usuario para administrar mi catedra y cuando entre por primera vez a administrarla me aparecio el siguiente mensaje: "Atención!!su primera tarea como administrador del sitio de la cátedra debe ser crear y activar una comisión". Ese comentario lo obliga a que haya una comision? o es solo una sugerencia? Porque me parece que tranquilamente podria haber una pagina que no utilice la parte de comisiones(parciales, tps) y solo sea para subir los apuntes.
+
+- IMPORTANTE: la tabla objetivos tiene un campo publicar, que yo lo usaba para saber si hay que mostrar los objetivos o no. Pero ahora que veo la parte de modulos(que vos algo me habias contado), veo que esa informacion esta en otra tabla(tabla modulos). Eso es algo que voy a tener que cambiar. La consulta es: el campo publicar de la tabla objetivos quedo obsoleto? Si es asi, borralo asi no nos confundimos. Otra consulta es: como se cual es el objetivo en la tabla modulos? Es fijo '2'? O hay otra tabla que describe cada uno de los posibles modulos a mostrar? Ademas faltan 2 modulos mas?(los trabajos practicos y los parciales) ---> hecho
+
+- Igual que objetivos el tema del campo publicar en la tabla plan ---> hecho
+
+- Algunos botones dice guardar y en otros aceptar. Creo que si lo que hace es guardar y mantener la misma pantalla, habria que poner Guardar.
+
+
+
+Bugs...
+
+En el administrador general.
+- Cuando estoy dando de alta una catedra y me equivoco en algun dato, no me vuelve a completar bien el nombre de la catedra. Lo probe con el nombre "Catedra de Anibal" y solo me aparece "Catedra".
+- Cuando quiero modificar una catedra, no me acepta ningun nombre de catedra como correcto.
+
+En el administrador de catedra.
+-* Cuando doy de alta al integrante Guido Sanchez, el mensaje que aparece es: "El integrante:Guido fue agregado exitosamente". Que Guido? Suller? Kazcka? Perendengue? creo que habria que completar el nombre ---> hecho
+-* Cuando voy a modificar un link, no me aparece por defecto el tipo de link al que pertenece ese link. Por ejemplo: doy de alta el link google del tipo buscadores. Ahora quiero modificar este google porque quiero ponerle goooooogle. Voy a modificarlo y NO me pone que es de la categoria buscadores (sino que pone que es de la primera categoria que aparece), o sea no setea la categoria del link en la que tenia anteriormente. -- listo
+-* El previsualizar, esta cargando la materia 22 cuando estoy logueado en la 41 ---> hecho
+-* La tabla apuntes tiene un publicar especifico para un determinado apunte. De donde lo manejo a ese campo? es decir, despues de darlo de alta, como lo publico? en base a esto tengo que modificar el include_menu.php, el apuntes.php y el bajar_apunte.php -- listo...le agregue el publicar al listado del admin
+-* Cuando quiero eliminar un tipo de bibliografia hay un copypaste asquerosisimo, ya que me dice: Esta seguro de querer eliminar los INTEGRANTES de la materaia. -- listo...y que
+-* Cuando quiero eliminar una bibliografia hay un copypaste asquerosisimo, ya que me dice: Esta seguro de querer eliminar los INTEGRANTES de la materaia. -- listo
+-* En el repositorio me permite guardar items sin archivo adjunto. Esto deberia ser posible?  ---por ahora si..vemos
+-* En el repositorio, cuando voy a dar de alta un archivo, esta todo ok. Pero si estoy modificando un item del repositorio que no tiene archivo, no me deja subir un archivo. -- listo
+-* La tabla repositorio tiene un publicar especifico para un determinado apunte. De donde lo manejo a ese campo? es decir, despues de darlo de alta, como lo publico? en base a esto tengo que modificar el include_menu.php, el apuntes.php y el bajar_apunte.php ---> hecho
+- No me funciona el alta de trabajos practicos. Me da el mensaje de alta exitosa pero no guarda nada.
+- No me funciona el alta de parciales.
+-* Cuando quiero eliminar un tipo de link hay un copypaste asquerosisimo, ya que me dice: Esta seguro de querer eliminar los INTEGRANTES de la materaia. -- listo
+-* Cuando quiero eliminar un link hay un copypaste asquerosisimo, ya que me dice: Esta seguro de querer eliminar los INTEGRANTES de la materaia. -- listo
+
+Agregaditos del 22-6-2004
+
+- En la tabla de examenes finales falta el campo comentario_notas como lo tienen los parciales y los tp. Lo agregamos?
+-* El campo nota de la tabla examenes_finales_notas es varchar(100). Creo que hay que cambiarlo porque siempre va a ser vacio o de 1 a 10. listo!
+-* En el pasar notas de examen final, no andan los ordenar(fijense en el link cuando pasen el mouse por arriba y vean que hay un {ord} que hay que arreglar) listo!
+- En el administrar comisiones, falta usar la funcion convertir_fecha para que muestre dd-mm-aaaa (quizas en otros lados tambien) ---> hecho
+
+- Cuando estoy modificando una novedad y aprieto el boton volver, vuelve a una pagina incorrecta
+- En el listado de repositorio estan los datos muy amontonados
+
+IMPORTANTE: Verificar que las notas de los trabajos practicos y parciales funcionen bien.

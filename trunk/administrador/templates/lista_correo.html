@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Alta de Usuario</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="lista_correo_hacer.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="66%" align="center" cellspacing="2">
+          <tr> 
+            <td> 
+              <table width="100%" align="center" class="tabla_titulo">
+                <tr> 
+                  <td align="center" width="91%" height="12"> <font size="2" face="Arial, Helvetica, sans-serif"><b>Lista 
+                    de Correo</b></font></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td> 
+              <table width="77%" height="207" border="0" align="center" cellpadding="0" cellspacing="0" class="tabla_cuerpo">
+                <tr> 
+                  <td width="21%"><b>Asunto</b></td>
+                  <td width="79%"> <input type="text" name="vf_asunto" size="40" value="{vf_asunto}" class="campo_texto"> 
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>Para</b></td>
+                  <td colspan="2">
+				  	<select name="vf_usuario">
+						<option value="0" selected> TODOS </option>
+		                <!-- BEGIN usuario -->
+                        <option value="{id_usuario}">{nombre}</option>
+                        <!-- END usuario -->
+                    </select></td>
+                </tr>
+                <tr> 
+                  <td width="21%"><b>Mensaje</b></td>
+                  <td width="79%" colspan="2"> <textarea name="vf_contenido" rows="6" cols="35" >{vf_texto}</textarea> 
+                  </td>
+                </tr>
+              </table>
+              <p align="center"> 
+                <input type="submit" value="Enviar" name="accion" class="boton">
+                &nbsp;&nbsp; 
+                <input type="submit" value="Volver" name="vf_redirigir" class="boton">
+                <input type="hidden" name="vf_donde_redirigir" value="menu.php?">
+              </p>
+            </td>
+          </tr>
+          <tr class="tabla_pie"> 
+            <td height="28"> 
+              <div align="center"> 
+                <table width="100%" border="0" class="firma">
+                  <tr> 
+                    <td> 
+                      <div align="center">{firma} </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

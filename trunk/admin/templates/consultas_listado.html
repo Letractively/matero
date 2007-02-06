@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>MaTero - Listado de Integrantes</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<br>
+<table border="0">
+  <tr> 
+    <form name="form2" method="post" action="consultas_listado.php">
+      <div align="center"> 
+        <select name="vf_tema" onChange="submit()">
+          <!-- BEGIN temas -->
+          <option value={idt} {sel} {chek}>{tema}</option>
+          <!-- END temas -->
+        </select>
+      </div>
+    </form>
+  </tr>
+  <tr> 
+    <td> <br> 
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="consultas_opciones.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr> 
+            <td> <div align="center">{mensaje}</div></td>
+          </tr>
+        </table>
+        <table align="center" cellspacing="2">
+          <tr class="tabla_titulo"> 
+            <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Listado 
+                de consultas de la C&aacute;tedra</b></font> </div></td>
+          </tr>
+          <tr> 
+            <td> </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="15" align="center"> </td>
+          </tr>
+		  
+		  
+          <tr class="tabla_cuerpo"> 
+            <td height="28"> <div align="center"> 
+                <input name="boton" type="submit" id="boton3" class="boton" value="Agregar otra consulta">
+                &nbsp;&nbsp;
+				<input name="boton" type="submit" id="boton3" class="boton" value="Establecer tema como principal">
+				&nbsp;&nbsp; 
+                <input name="vf_volver" type="submit" id="vf_volver"  class="boton" value="Volver">
+
+              </div></td>
+          </tr>
+		  
+		  
+          <tr class="tabla_cuerpo"> 
+            <td align="center"> <table class="tabla_cuerpo">
+                <tr> 
+                  <td width="1" height="22">&nbsp;</td>
+                  <td width="118">&nbsp;</td>
+                  <td width="257">&nbsp;</td>
+                  <td width="257">&nbsp;</td>
+                  <td width="66">&nbsp;</td>
+                  <td width="74"><input name="boton" type="submit" id="boton"  class="boton" value="Actualizar"></td>
+                  <td width="63"><input name="boton" type="submit" id="boton5" class="boton"  value="Publicar"></td>
+                  <td width="88"><input name="boton" type="submit" id="boton4"  class="boton" value="Eliminar" ></td>
+                </tr>
+                <tr> 
+                  <td height="22"> <div align="center"></div></td>
+                  <td><div align="center"><strong>Fecha</strong></div></td>
+                  <td><div align="center"><strong>Consulta</strong></div></td>
+                  <td><div align="center"><strong>Respuesta</strong></div></td>
+                  <td><div align="center"><strong>Modificar</strong></div></td>
+                  <td><div align="center"><strong>Pos</strong></div></td>
+                  <td><div align="center"><strong>Publicar</strong></div></td>
+                  <td> <div align="center"><strong>Eliminar</strong></div></td>
+                </tr>
+                <!-- BEGIN consultas -->
+                <tr> 
+                  <td><div align="center"></div></td>
+                  <td><div align="left">{fecha}</div></td>
+                  <td align="left"> <div align="left">
+                      <textarea name="vf_consulta_{ida}" cols="37" rows="3" class="campo_texto" id="vf_consulta" readonly>{consulta}</textarea>
+                    </div></td>
+                  <td align="left">
+<textarea name="vf_respuesta_{ida}" cols="37" rows="3"  class="campo_texto" id="vf_respuesta"  readonly>{respuesta}</textarea>
+                  </td>
+                  <td><a href="consultas_modificaciones.php?ida={ida}&vf_tema={vf_tema}" class="link_azul">Modificar</a></td>
+                  <td><div align="center"><strong> 
+                      <input name="vf_pos_{ida}" type="text" id="vf_pos_{ida}" value="{pos}" size="1">
+                      </strong></div></td>
+                  <td><div align="center"> 
+                      <input name="vf_pub_{ida}" type="checkbox" id="vf_pub_{ida}" value="1"  {chek}>
+                    </div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="vf_elim_{ida}" value="1">
+                    </div></td>
+                </tr>
+                <!-- END consultas -->
+                <tr> 
+                  <td height="26"> <div align="center"> </div></td>
+                  <td><div align="center"></div></td>
+                  <td><div align="center"> </div></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td><div align="center"> 
+                      <input name="boton" type="submit" id="boton"  class="boton" value="Actualizar">
+                    </div></td>
+                  <td><div align="center"> 
+                      <input name="boton" type="submit" id="boton" class="boton"  value="Publicar">
+                    </div></td>
+                  <td><div align="center"> 
+                      <input name="boton" type="submit" id="boton6"  class="boton" value="Eliminar" >
+                      <!-- onclick="javascript:return confirmar_eliminar_boton('this','Estás seguro que quieres eliminar las consultas seleccionadas?');" -->
+                    </div></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="28"> <div align="center"> 
+                <input name="boton" type="submit" id="boton3" class="boton" value="Agregar otra consulta">
+                &nbsp;&nbsp;
+				<input name="boton" type="submit" id="boton3" class="boton" value="Establecer tema como principal">
+				&nbsp;&nbsp; 
+                <input name="vf_volver" type="submit" id="vf_volver"  class="boton" value="Volver">
+                <input name="vf_donde_redirigir" type="hidden" id="vf_donde_redirigir2" value="menu.php?">
+                <input name="menu" type="hidden" id="menu" value="1">
+                <input name="vf_tema" type="hidden" id="menu" value="{vf_tema}">
+              </div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td><div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p></td>
+  </tr>
+</table>
+<!-- END datos -->
+</body>
+</html>

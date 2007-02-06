@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>MaTero - Administrador</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<!-- BEGIN bloque_logueo -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right"></div>
+      <form name="form1" method="post" action="loguear.php">
+        <table width="300"  cellspacing="2" align="center">
+          <tr class="tabla_titulo"> 
+            <td  colspan="2"  align="center"> Logueo</td>
+          </tr>
+          <tr> 
+            <td class="tabla_cuerpo" > 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="tabla_cuerpo" width="35%">&nbsp;</td>
+                  <td class="tabla_cuerpo" width="65%">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td class="tabla_cuerpo" width="35%"> 
+                    <div align="center">Nick:</div>
+                  </td>
+                  <td class="tabla_cuerpo" width="65%"> 
+                    <div align="center"> 
+                      <input type="text" class="campo_texto" name="vf_nick" value="{nick}">
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td class="tabla_cuerpo" width="35%"> 
+                    <div align="center">Pass:</div>
+                  </td>
+                  <td class="tabla_cuerpo" width="65%"> 
+                    <div align="center"> 
+                      <input type="password" class="campo_texto" name="vf_pass" value="{pass}">
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td class="tabla_cuerpo" colspan="2" height="11"> 
+                    <div align="center"><br>
+                      <input type="submit" class="boton" name="Submit" value="Aceptar">
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td class="tabla_cuerpo" colspan="2" height="11">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr> 
+            <td class="firma" height="18"> 
+              <div align="center">{firma}</div>
+            </td>
+          </tr>
+        </table>
+        <br>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- END bloque_logueo -->
+</body>
+</html>

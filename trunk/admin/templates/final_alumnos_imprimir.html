@@ -1,0 +1,91 @@
+<!--#include file="file:///C|/apache/htdocs/ignito/Setubal/templates/conntemp.asp"-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Matero - Listado de Alumnos</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<SCRIPT language=JavaScript>
+<!--
+function printThis(){
+if (!window.print){
+alert(" Necesitas un browser 4.x o superior para usar el link imprimir!")
+return
+}
+window.print()
+}
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+.titulo_principal{
+               font-family: Verdana, Arial, Helvetica, sans-serif;
+               font-size:13px;
+               font-style: normal;
+               color: #000000;
+               background-color: #F2F2F2
+}
+.normal{
+               font-family: Verdana, Arial, Helvetica, sans-serif;
+               font-size:12px;
+               font-style: normal;
+               color: #000000;
+}
+.firma {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        background-color:#FFFFFF
+}
+A.link {
+        FONT-SIZE: 10px; COLOR: #003366; FONT-FAMILY: verdana; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A.link{
+        FONT-SIZE: 10px; COLOR: #003366; FONT-FAMILY: verdana; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+</STYLE>
+</HEAD>
+<BODY>
+<table width="550" height="150" align="center" cellspacing="2">
+  <tr class="titulo_principal"> 
+    <td> <div align="center"><b>Listado de Alumnos - Comisi&oacute;n: {nombre_comision} 
+        </b></div></td>
+  </tr>
+  <tr > 
+    <td> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr class="" height="6"> 
+          <td width="8%" height="6"></td>
+          <td width="19%" height="6"></td>
+          <td width="32%" height="6"></td>
+        </tr>
+        <tr class="normal"> 
+          <td width="8%"> <div align="center"><strong>LU</strong></div></td>
+          <td width="19%"> <div align="center"><strong>Apellido</strong></div></td>
+          <td width="32%"> <div align="center"><strong>Nombre</strong></div></td>
+        </tr>
+        <!-- BEGIN bloque_listado -->
+        <tr class="normal"> 
+          <td><div align="center">{lu}</div></td>
+          <td><div align="center">{apellido}</div></td>
+          <td><div align="center">{nombre}</div></td>
+        </tr>
+        <!-- END bloque_listado -->
+        <tr class="com_tabla_cuerpo" height="8"> 
+          <td width="8%" height="8"></td>
+          <td width="19%" height="8"></td>
+          <td width="32%" height="8"></td>
+        </tr>
+        <tr class="com_tabla_cuerpo" height="8"> 
+          <td width="8%" height="8"></td>
+          <td width="19%" height="8"></td>
+          <td width="32%" height="8"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr class="com_tabla_cuerpo"> 
+    <td align="center"> <div align="right"><a href="javascript:printThis()" class="link">imprimir</a></div></td>
+  </tr>
+  <tr class="firma"> 
+    <td> <div align="center">{firma} - MATERO</div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

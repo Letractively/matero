@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>MaTero</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+	<form ENCTYPE="multipart/form-data" name="form1" method="post" action="pasar_bd.php">
+
+			
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="500"  cellspacing="2" align="center">
+        <tr class="tabla_titulo"> 
+          <td  colspan="2"  align="center"> Men&uacute; Principal &gt;&gt; Selecci&oacute;n 
+            archivo para la BD de alumnos.</td>
+        </tr>
+        <tr> 
+          <td class="tabla_cuerpo"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="tabla_cuerpo"><p> <strong><font color="#FF0000">&nbsp;LEER 
+                    CON ATENCION!!!</font></strong></p>
+                    <p>*&nbsp;El archivo debe tener los datos separados por comas, 
+                      un registro por l&igrave;nea, los campos requeridos son: 
+                      nombre, apellido, LU, dni, id_carrera</p>
+                    <p>*&nbsp; Este proceso, borra el contenido de la tabla de 
+                      alumnos e inserta lo contenido en el archivo que se adjunta.</p>
+                    <p>* Verificar que el archivo anterir de laumnosexista, como 
+                      backup <br>
+                      <br>
+                    </p></td>
+              </tr>
+              <tr>
+                <td class="tabla_cuerpo">
+
+                    <input name="vf_archivo" type="file" class="boton" id="vf_archivo">
+                  </td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td class="tabla_cuerpo">&nbsp; </td>
+        </tr>
+        <tr>
+          <td class="firma" height="18">
+              <div align="center">
+                <input name="submit" type="submit" class=boton id="submit" value="Aceptar">
+                <input name="vf_volver" type="submit" class=boton id="vf_volver" value="Volver">
+              </div>
+            </td>
+        </tr>
+        <tr> 
+          <td class="firma" height="18"> <div align="center">{firma}</div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

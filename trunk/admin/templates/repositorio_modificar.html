@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>MaTero - Admin</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+</head>
+<body>
+<br>
+<!-- BEGIN bloque -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right"></div>
+      <form ENCTYPE="multipart/form-data" name="form1" method="post" action="repositorio_hacer_modificacion.php">
+        <table width="480"  cellspacing="2" align="center">
+          <tr class="cat_tabla_titulo"> 
+            <td  colspan="2"  align="center"> <strong>Modificar Item de Repositorio</strong></td>
+          </tr>
+          <tr> 
+            <td class=cat_tabla_cuerpo > 
+              <table width="100%"  >
+                <tr  > 
+                  <td class=cat_tabla_cuerpo><b>T&iacute;tulo:</b></td>
+                  <td class=cat_tabla_cuerpo> 
+                    <input name="vf_titulo" type="text" id="vf_titulo" value="{titulo}" size="60" maxlength="250">
+                  </td>
+                </tr>
+                <tr class=cat_tabla_cuerpo > 
+                  <td><b>Comentarios:</b></td>
+                  <td> 
+                    <textarea name="vf_comentario" cols="58" rows="3" id="vf_comentario">{comentario}</textarea>
+                  </td>
+                </tr>
+                <tr class=cat_tabla_cuerpo > 
+                  <td><b>Archivo</b></td>
+                  <td> 
+                    <input name="vf_archivo" type="file" id="vf_archivo">
+                  </td>
+                </tr>
+                <tr class=cat_tabla_cuerpo > 
+                  <td><b>Archivo seleccionado</b></td>
+                  <td> 
+                    <table width="100%" class="tabla_cuerpo">
+                      <tr> 
+                        <td class="tabla_cuerpo"><font face="Arial, Helvetica, sans-serif" size="2">{archivo}</font></td>
+                        <td> <font face="Arial, Helvetica, sans-serif" size="2"> 
+                          <input type="checkbox" name="vf_eliminar" value="1">
+                          &nbsp;&nbsp;&nbsp; Seleccione si desea eliminar archivo 
+                          </font></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="firma" height="18"> <div align="center">
+                <input type="submit" class="boton" name="Submit" value="Aceptar">
+                &nbsp;&nbsp; 
+                <input name="vf_redirigir" type="submit" class="boton" id="vf_volver2" value="Volver">
+                <input type="hidden" name="idr" value="{idr}">
+                <font face="Arial, Helvetica, sans-serif" size="2"> 
+                <input type="hidden" name="vf_archivo_viejo" value="{archivo}">
+                <input type="hidden" name="vf_donde_redirigir" value="repositorio_listado.php?">
+                </font> </div>
+            </td>
+          </tr>
+          <tr> 
+            <td class="firma" height="18"> <div align="center">{firma}</div></td>
+          </tr>
+        </table>
+        <br>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- END bloque-->
+</body>
+</html>

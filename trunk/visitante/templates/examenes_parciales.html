@@ -1,0 +1,62 @@
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="1">&nbsp;</td>
+		  <td width="10">&nbsp;</td>
+          <td height="100%" valign="top"> 
+            <br>
+            <h2>Ex&aacute;menes Parciales</h2>
+<form name="form1" method="post" action="index.php?id_catedra={idc}&ver=11">
+  <p align="center">Comision: 
+    <select name="id_comision" onChange="submit()">
+      <option value=0>Seleccione la Comisión</option>
+	  <!-- BEGIN bloquecomision -->
+      <option value="{valoropcion}"{selected}>{nombreopcion}</option>
+	  <!-- END bloquecomision -->
+    </select>
+  </p>
+  <!-- BEGIN bloquecomentario1 -->
+  <p align="center">{mensaje}</p>
+              <p>{comentario1} </p><!-- END bloquecomentario1 -->
+			  <!-- BEGIN bloqueparcial -->
+              <table width="60%" border="0" align="center" cellpadding="4" cellspacing="1">
+                <tr> 
+                  <td width="82%"> 
+                    <div align="left"><strong>{titulo}</strong>{com} </div>
+                  </td>
+                  <td width="18%">
+                    <div align="center">{notas}</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td colspan="2"><b>Fecha:</b> {fecha} <b>Hora: </b>{hora}</td>
+                </tr>
+                <tr> 
+                  <th height="2" colspan="2" bgcolor="#CCCCCC"></th>
+                </tr>
+                <tr> 
+                  <td colspan="2">&nbsp;</td>
+                </tr>
+              </table>
+			  <!-- END bloqueparcial -->
+              <p>&nbsp;</p>
+              <!-- BEGIN bloquecomentario2 -->
+              {comentario2} 
+              <!-- END bloquecomentario2 -->
+            </form>
+            <div align="center"> 
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </td>
+		  <td width="10">&nbsp;</td>
+        </tr>
+      </table>

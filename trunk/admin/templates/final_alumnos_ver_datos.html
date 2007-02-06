@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>MaTero - Alta de Comisi&oacute;n</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<link href="../../estilos/admin.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> 
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="final_alumnos_hacer_alta.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="529" height="150" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Confirmar 
+                datos del alumno</b></font></div></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td height="116" align="center" valign="middle"> 
+              <table width="95%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="cat_tabla_cuerpo">
+                <tr> 
+                  <td colspan="2"><strong>Ex&aacute;men:</strong> {examen}</td>
+                </tr>
+                <tr> 
+                  <td colspan="2"><strong>LU:</strong>&nbsp;{lu}&nbsp;- <strong>&nbsp;DNI:&nbsp;</strong>{dni}</td>
+                </tr>
+                <tr> 
+                  <td colspan="2"><strong>Apellido</strong>: {apellido}<strong>&nbsp;- 
+                    &nbsp;Nombre</strong>: {nombre}</td>
+                </tr>
+                <tr> 
+                  <td colspan="2"><strong>Carrera:</strong> {carrera}</td>
+                </tr>
+                <tr> 
+                  <td colspan="2"> <div align="center"> </div></td>
+                </tr>
+                <tr> 
+                  <td width="30%" height="5" nowrap></td>
+                  <td width="70%" height="5" nowrap></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo">
+            <td align="center"><input name="otro" type="submit" class="boton" id="otro" value="Guardar">
+              &nbsp; 
+              <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="final_alumnos_alta.php?idf={idf}&"> 
+              <input type="hidden" name="vf_libreta_universitaria" value="{lu}">
+              <input type="hidden" name="vf_email_alumno" value="{email}">
+              <input name="idf" type="hidden" id="idf" value="{idf}"> </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td> 
+              <div align="center">{firma} </div> </td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

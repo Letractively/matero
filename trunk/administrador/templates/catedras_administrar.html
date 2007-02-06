@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Administrar C&aacute;tedras</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+		<table width="603"  cellspacing="2" align="center">
+          <tr class="tabla_titulo"> 
+            <td  colspan="2"  align="center"> Listado de C&aacute;tedras</td>
+          </tr>
+          <tr> 
+            
+          <td class="tabla_cuerpo" valign="top" height="71"> 
+            <form name="form1" method="post" action="catedras_eliminar.php">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+                <tr class=tabla_cuerpo> 
+                  <td width="61%"> 
+                    <div align="center"><b>Nombre</b></div>
+                  </td>
+                  <td width="18%"> 
+                    <div align="center"><b>Modificar </b></div>
+                  </td>
+                  <td width="21%"> 
+                    <div align="center"><b>Eliminar</b></div>
+                  </td>
+                </tr>
+                <!-- BEGIN bloque_catedra -->
+                <tr class={estilo}> 
+                  <td width="61%"> 
+                    <div align="left"><a href="catedras_mostrar.php?vf_id_catedra={id_catedra}" class=link_azul>{nombre_catedra}</a></div>
+                  </td>
+                  <td width="18%"> 
+                    <div align="center"><a href="catedras_modificar.php?vf_id_catedra={id_catedra}" class=link_azul>modif</a></div>
+                  </td>
+                  <td width="21%"> 
+                    <div align="center"> 
+                      <input type="checkbox" name="vf_checkbox_{id_catedra}" value="1">
+                    </div>
+                  </td>
+                </tr>
+                <!-- END bloque_catedra -->
+                <tr class=tabla_cuerpo> 
+                  <td colspan="2"></td>
+                  <td width="21%"> 
+                    <div align="center"> 
+                      <input type="submit" name="Submit" value="Eliminar" class=boton>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+			  </form>
+            </td>
+          </tr>
+		  
+          <tr class=tabla_cuerpo> <form name="form2" method="post" action="catedras_hacer_alta.php">
+          <td> 
+            <div align="center">
+                <input type="submit" name="vf_volver" value="Volver" class=boton>
+            </div>
+          </td></form>
+          </tr>
+		  
+          <tr> 
+            <td class="firma" height="18"> 
+              <div align="center">{firma}</div>
+            </td>
+          </tr>
+        </table>
+      
+    </td>
+  </tr>
+</table>
+</body>
+</html>

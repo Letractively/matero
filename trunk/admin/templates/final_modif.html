@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>MaTero - Admin</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<script language="JavaScript" src="../includes/calendario/javascripts.js"></script> 
+</head>
+<body>
+<br>
+<!-- BEGIN bloque -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right"></div>
+      <form ENCTYPE="multipart/form-data" name="form1" method="post" action="final_hacer_modif.php">
+        <table width="480"  cellspacing="2" align="center">
+          <tr class="cat_tabla_titulo"> 
+            <td  colspan="2"  align="center"> <strong>Modificaci&oacute;n de Ex&aacute;men 
+              Final</strong></td>
+          </tr>
+          <tr> 
+            <td class=cat_tabla_cuerpo > <table width="100%"  >
+                <tr  > 
+                  <td class=cat_tabla_cuerpo>T&iacute;tulo:</td>
+                  <td class=cat_tabla_cuerpo><input name="vf_titulo" type="text" id="vf_titulo" value="{titulo}" size="60" maxlength="250"></td>
+                </tr>
+                <tr class=cat_tabla_cuerpo > 
+                  <td>Comentarios de notas:</td>
+                  <td><textarea name="vf_comentario" cols="58" rows="3" id="vf_comentario">{comentario}</textarea></td>
+                </tr>
+                <tr class=cat_tabla_cuerpo > 
+                  <td>D&iacute;a:</td>
+                  <td><a href="javascript:muestraCalendario('','form1','vf_dia','vf_mes','vf_anio')"><img border=0 src="almanaque.gif"></a> 
+                    <input name="vf_dia" type="text" id="vf_dia" size="2" value={dia} class="boton">
+                    / 
+                    <select name="vf_mes" id="vf_mes" class="boton">
+                      <option value="0"  {selected_mes0}>mes</option>
+                      <option value="1"  {selected_mes1}>enero</option>
+                      <option value="2"  {selected_mes2}>febrero</option>
+                      <option value="3"  {selected_mes3}>marzo</option>
+                      <option value="4"  {selected_mes4}>abril</option>
+                      <option value="5"  {selected_mes5}>mayo</option>
+                      <option value="6"  {selected_mes6}>junio</option>
+                      <option value="7"  {selected_mes7}>julio</option>
+                      <option value="8"  {selected_mes8}>agosto</option>
+                      <option value="9"  {selected_mes9}>setiembre</option>
+                      <option value="10" {selected_mes10}>octubre</option>
+                      <option value="11" {selected_mes11}>noviembre</option>
+                      <option value="12" {selected_mes12}>diciembre</option>
+                    </select>
+                    / 
+                    <input name="vf_anio" type="text" id="vf_anio" size="4" value={anio} class="boton"> 
+                  </td>
+                </tr>
+                <tr class=cat_tabla_cuerpo >
+                  <td>Hora:</td>
+                  <td><input name="vf_hora" type="text" id="vf_hora" value="{hora}" size="2" maxlength="2" class="boton">
+                    <strong>: </strong> 
+                    <input name="vf_minutos" type="text" id="vf_minutos" value="{min}" size="2" maxlength="2" class="boton">
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td class="firma" height="18"> <div align="center">
+                <input type="submit" class="boton" name="Submit" value="Aceptar">
+                &nbsp;&nbsp; 
+                <input name="vf_redirigir" type="submit" class="boton" id="vf_volver2" value="Volver">
+                <input name="idf" type="hidden" id="idf" value="{idf}">
+                <input name="vf_donde_redirigir" type="hidden" id="vf_donde_redirigir" value="final_listado.php?">
+              </div></td>
+          </tr>
+          <tr> 
+            <td class="firma" height="18"> <div align="center">{firma}</div></td>
+          </tr>
+        </table>
+        <br>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- END bloque-->
+</body>
+</html>

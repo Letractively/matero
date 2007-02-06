@@ -1,0 +1,335 @@
+<html>
+<head>
+<title>MaTero</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<link rel="stylesheet" href="../estilos/tooltip.css" type="text/css">
+</head>
+<body>
+<SCRIPT language="javascript" src="../includes/tooltip.js"></SCRIPT>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="700" align="center"  cellspacing="2">
+        <tr> 
+          <td height="321" > 
+		  <table width="100%" height="100%" border="0" cellpadding="2" cellspacing="0">
+              <tr valign="middle"> 
+                <td height="22" colspan="2" class="cat_tabla_titulo"> <div align="center"><b>ADMINISTRACI&Oacute;N 
+                    DE LA CATEDRA : <font size="3"> <font face="Verdana, Arial, Helvetica, sans-serif"> 
+                    {nombre_catedra} </font></font></b> </div></td>
+              </tr>
+              <tr> 
+                <td width="52%" height="20" class="cat_tabla_cuerpo"><b>:: Info 
+                  C&aacute;tedra</b></td>
+                <td width="48%" class="cat_tabla_cuerpo"><div align="left"></div>
+                  <div align="right">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0"  class=com_tabla_cuerpo>
+                      <tr>
+                        <td><img src="img/informacion.jpg" onmouseover="ddrivetip('Da la posibilidad de realizar consultas al grupo web')" ; onmouseout="hideddrivetip()" width="15"> <a href="consultas.php" class=link_azul><strong>:.Consultas</strong></a> 
+                          </td>
+                        <td><div align="right"><strong>:: Contrase&ntilde;a: </strong><a href="pass_modif.php"  class=link_azul>cambiar</a></div></td>
+                      </tr>
+                    </table>
+                    
+                  </div></td>
+              </tr>
+              <tr> 
+                <td valign="top" class="cat_tabla_cuerpo"><table width="98%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr> 
+                      <td height="40"> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20"><strong> &nbsp;:. Plan de C&aacute;tedra</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Se abrira un editor para ingresar/modificar el plan de catedra')" ; onmouseout="hideddrivetip()" width="15"> <a href="plan_catedra_modif.php?" class=link_azul>Modificar 
+                              Plan de C&aacute;tedra</a></td>
+                          </tr>
+                        </table></td>
+                      <td height="40"> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20"><strong>&nbsp;:. Objetivos</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Se abrira un editor para ingresar/modificar los objetivos de la catedra')" ; onmouseout="hideddrivetip()" width="15"> <a href="objetivos_catedra_modif.php?PHPSESSID={PHPSESSID}" class=link_azul>Modificar 
+                              Objetivos</a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20"><strong> &nbsp;:. Integrantes de la 
+                              C&aacute;tedra</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los docentes de la catedra')" ; onmouseout="hideddrivetip()" width="15"> <a href="profesor_alta.php?" class=link_azul>Alta 
+                              Integrante </a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja docentes')" ; onmouseout="hideddrivetip()" width="15"> <a href="profesor_listado.php?" class=link_azul>Administrar 
+                              Integrantes</a></td>
+                          </tr>
+                        </table></td>
+                      <td> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20"><strong>:. Apuntes</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los apuntes de la catedra')" ; onmouseout="hideddrivetip()" width="15"> <a href="apunte_alta.php?" class=link_azul>Alta 
+                              Apunte</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja apuntes')" ; onmouseout="hideddrivetip()" width="15"> <a href="apuntes_listado.php?" class=link_azul>Administrar 
+                              Apuntes </a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr class="cat_tabla_cuerpo"> 
+                            <td height="20"> <strong>:. Novedades</strong></td>
+                          </tr>
+                          <tr class="cat_tabla_cuerpo"> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar las novedades de la catedra y asi mantener al tanto a los alumnos de cualquier eventualidad')" ; onmouseout="hideddrivetip()" width="15"> <a href="novedades_alta.php" class=link_azul>Alta 
+                              Novedades</a></td>
+                          </tr>
+                          <tr class="cat_tabla_cuerpo"> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja novedades')" ; onmouseout="hideddrivetip()" width="15"> <a href="novedades_listado.php" class="link_azul">Administrar 
+                              Novedades</a></td>
+                          </tr>
+                        </table></td>
+                      <td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20"><strong>:. Ex&aacute;men Final</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los exámenes finales de la catedra para publicar la fecha y descripcion de los mismos')" ; onmouseout="hideddrivetip()" width="15"> <a href="final_alta.php?" class=link_azul>Alta 
+                              de ex&aacute;men </a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja exámenes. Se pueden cargar/modificar los alumnos que rinden el final y cargar/modificar las notas de dichos alumnos')" ; onmouseout="hideddrivetip()" width="15"> <a href="final_listado.php" class=link_azul>Administrar 
+                              Ex&aacute;menes</a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="cat_tabla_cuerpo">
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo"><strong>:. 
+                              Bibliografia</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los <b>tipos</b> de bibliografia necesarios para poder dar de alta nueva bibliografia (cada bibliografia tiene un tipo)')" ; onmouseout="hideddrivetip()" width="15"> <a href="biblio_tipo_alta.php?" class="link_azul">Alta 
+                              Tipo Bibliografia</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja <b>tipos</b> de bibliografía')" ; onmouseout="hideddrivetip()" width="15"> <a href="biblio_tipo_listado.php?" class=link_azul>Administrar 
+                              Tipo Bibliografia</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar la bibliografía de la catedra ')" ; onmouseout="hideddrivetip()" width="15"> <a href="biblio_alta.php?" class=link_azul>Alta 
+                              Bibliografia</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja bibliografía')" ; onmouseout="hideddrivetip()" width="15"><a href="biblio_listado.php" class=link_azul>Administrar 
+                              Bibliografia</a></td>
+                          </tr>
+                        </table></td>
+                      <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo"><strong>:. 
+                              Links</strong></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los tipos de links necesarios para poder dar de alta un nuevo link (cada link tiene un tipo)')" ; onmouseout="hideddrivetip()" width="15"> <a href="link_tipo_alta.php" class="link_azul">Alta 
+                              Tipo Link</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja <b>tipos</b> de links')" ; onmouseout="hideddrivetip()" width="15"> <a href="link_tipo_listado.php?" class=link_azul>Administrar 
+                              Tipo Link</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los links de la catedra para direccionar a paginas de interes')" ; onmouseout="hideddrivetip()" width="15"> <a href="link_alta.php" class=link_azul>Alta 
+                              Link</a></td>
+                          </tr>
+                          <tr> 
+                            <td height="20" class="cat_tabla_cuerpo">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja links')" ; onmouseout="hideddrivetip()" width="15"> <a href="link_listado.php" class=link_azul>Administrar 
+                              Links</a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                <td align="center" valign="top" class=cat_tabla_cuerpo><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td><table width="290" border="0" cellpadding="0" cellspacing="0">
+                          <tr> 
+                            <td height="1" nowrap></td>
+                            <td height="1" nowrap bgcolor="#000000"></td>
+                            <td height="1" nowrap bgcolor="#000000"></td>
+                          </tr>
+                          <tr class=com_tabla_cuerpo> 
+                            <td width="15" height="25" valign="top"><img src="img/izq_arriba.jpg" width="15" height="15" align="top"></td>
+                            <td height="25"><b> &nbsp;:: Configuraci&oacute;n 
+                              de la P&aacute;gina</b></td>
+                            <td width="16">&nbsp;</td>
+                          </tr>
+                          <tr class=com_tabla_cuerpo> 
+                            <td width="15">&nbsp;</td>
+                            <td valign="top"> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=com_tabla_cuerpo>
+                                <tr> 
+                                  <td width="49%" valign="top"> <table width="100%" border="0" cellpadding="0" cellspacing="0" class=com_tabla_cuerpo>
+                                      <tr> 
+                                        <td height="20"><strong>:. M&oacute;dulos</strong></td>
+                                      </tr>
+                                      <tr> 
+                                        <td height="20"><img src="img/informacion.jpg" onmouseover="ddrivetip('Permite decidir si un módulo será publicado (es decir, si será mostrado a los alumnos)')" ; onmouseout="hideddrivetip()" width="15"> <a href="modulos_listado.php" class=link_azul>Administrar 
+                                          M&oacute;dulos</a></td>
+                                      </tr>
+                                      <tr> 
+                                        <td height="20" class="com_tabla_cuerpo"><img src="img/informacion.jpg" onmouseover="ddrivetip('Muestra la página tal como será visualizada por los alumnos')" ; onmouseout="hideddrivetip()" width="15"> <a href="../visitante/novedades.php?id_catedra={idc}" target="_blank" class=link_azul>Previsualizar</a></td>
+                                      </tr>
+                                    </table></td>
+                                  <td width="51%"><table width="100%" border="0" cellpadding="0" cellspacing="0" class=com_tabla_cuerpo>
+                                      <tr> 
+                                        <td height="20"><strong>:. Comisiones</strong></td>
+                                      </tr>
+                                      <tr> 
+                                        <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar las comisiones de la catedra')" ; onmouseout="hideddrivetip()" width="15"> <a href="comision_alta.php" class=link_azul>Alta 
+                                          de Comisi&oacute;n</a></td>
+                                      </tr>
+                                      <tr> 
+                                        <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja una comisión')" ; onmouseout="hideddrivetip()" width="15"> <a href="comision_administrar.php" class=link_azul>Administrar 
+                                          Comisi&oacute;n</a></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr> 
+                                  <td height="5" valign="top" nowrap> </td>
+                                  <td height="5" valign="top" nowrap></td>
+                                </tr>
+                              </table></td>
+                            <td width="16">&nbsp;</td>
+                          </tr>
+                          <tr class=com_tabla_cuerpo> 
+                            <td width="15" height="15">&nbsp;</td>
+                            <td height="15">&nbsp;</td>
+                            <td width="16" height="15"><img src="img/der_abajo.jpg" width="15" height="15"></td>
+                          </tr>
+                          <tr class=com_tabla_cuerpo> 
+                            <td height="1" nowrap bgcolor="#000000"></td>
+                            <td height="1" nowrap bgcolor="#000000"></td>
+                            <td height="1" nowrap></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td align="center" valign="middle"><table width="100%" height="120" border="0" cellpadding="0" cellspacing="0">
+                          <tr> 
+                            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20"><strong>:. Horarios</strong></td>
+                                </tr>
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar/modificar los horarios de cursado o consulta')" ; onmouseout="hideddrivetip()" width="15"> <a href="horarios_modificar.php?" class="link_azul">Modificar 
+                                    Horarios</a></td>
+                                </tr>
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20">&nbsp;</td>
+                                </tr>
+                              </table></td>
+                            <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20"><strong>:. Repositorio</strong></td>
+                                </tr>
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20"> &nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar archivos de la catedra que no seria adecuado ingresar en otros modulos')" ; onmouseout="hideddrivetip()" width="15"> <a href="repositorio_alta.php?" class="link_azul">Alta 
+                                    Item Repositorio</a></td>
+                                </tr>
+                                <tr class="cat_tabla_cuerpo"> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja lo publicado en repositorio')" ; onmouseout="hideddrivetip()" width="15"> <a href="repositorio_listado.php?" class="link_azul">Administrar 
+                                    Repositorio </a></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                                <tr> 
+                                  <td height="20"><strong>:. Alumnos</strong></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite asociar los alumnos de la catedra a una determinada comision')" ; onmouseout="hideddrivetip()" width="15"> <a href="alumnos_alta.php" class=link_azul>Alta 
+                                    de Alumnos</a></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja alumnos')" ; onmouseout="hideddrivetip()" width="15"> <a href="alumnos_administrar.php" class=link_azul>Administrar 
+                                    Alumnos</a></td>
+                                </tr>
+                              </table></td>
+                            <td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                                <tr> 
+                                  <td height="20"><strong>:. Ex&aacute;menes Parciales</strong></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los Examenes parciales de la catedra para publicar la fecha y descripcion de los mismos')" ; onmouseout="hideddrivetip()" width="15"> <a href="examen_parcial_alta.php" class=link_azul>Alta 
+                                    Ex&aacute;menes</a></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja exámenes parciales. Se pueden cargar/modificar las notas de los alumnos')" ; onmouseout="hideddrivetip()" width="15"> <a href="examen_parcial_administrar.php" class=link_azul>Administrar 
+                                    Ex&aacute;menes</a></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td valign="top"> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class=cat_tabla_cuerpo>
+                                <tr> 
+                                  <td height="20"><strong>:. Tp's</strong></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite ingresar los Trabajos practicos de la catedra para publicar la fecha ,descripcion y archivo de los mismos')" ; onmouseout="hideddrivetip()" width="15"> <a href="tp2_alta.php" class=link_azul>Alta 
+                                    Trabajos Pr&aacute;cticos</a></td>
+                                </tr>
+                                <tr> 
+                                  <td height="20">&nbsp;<img src="img/informacion.jpg" onmouseover="ddrivetip('Permite modificar o dar de baja TP\'s. Se pueden cargar/modificar las notas de los alumnos')" ; onmouseout="hideddrivetip()" width="15"> <a href="tp_administrar.php" class="link_azul">Administrar 
+                                    TP's</a></td>
+                                </tr>
+                              </table></td>
+                            <td valign="top"><p><strong>:.</strong><a href="http://www.frsf.utn.edu.ar/matero/manual_matero" target="_blank" class=link_azul><strong> Manual</strong></a> 
+                                <strong><font color="#FF0000">nuevo!</font> </strong> 
+                                </strong></p>
+                              </td>
+                          </tr>
+                          <tr> 
+                            <td height="5" nowrap></td>
+                            <td height="5" nowrap></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <form name="form1" method="post" action="cerrar_sesion.php">
+            <td class="cat_tabla_cuerpo"><div align="center"> 
+                <input type="submit" name="Submit" value="Cerrar Sesi&oacute;n" class=boton>
+              </div></td>
+          </form>
+        </tr>
+        <tr> 
+          <td class="firma" height="18"> <div align="center">{firma}</div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

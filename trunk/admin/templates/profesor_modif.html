@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>MaTero - Alta de Integrante</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="profesor_hacer_modif.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="51%" height="193" align="center" cellspacing="2">
+          <tr> 
+            <td class="tabla_titulo"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Modificaci&oacute;n 
+                de Integrante de la C&aacute;tedra</b></font></div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="116" align="center" valign="middle"> 
+              <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="tabla_cuerpo">
+                <tr> 
+                  <td width="30%"><div align="center"><b>Apellido:</b></div></td>
+                  <td width="70%"> <div align="left"> 
+                      <input type="text" name="vf_apellido" maxlength="80" size="30" value="{apellido}" class="campo_texto">
+                    </div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><b>Nombre:</b></div></td>
+                  <td width="70%"> <div align="left"> 
+                      <input type="text" name="vf_nombre" maxlength="80" size="30" value="{nombre}" class="campo_texto">
+                    </div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><b>Cargo:</b></div></td>
+                  <td width="70%"> <div align="left"> 
+                      <input name="vf_cargo" type="text" class="campo_texto" id="vf_cargo" value="{cargo}" size="30" maxlength="60">
+                    </div></td>
+                </tr>
+                <tr> 
+                  <td><div align="center"><b>E-mail:</b></div></td>
+                  <td width="70%"> <div align="left"> 
+                      <input type="text" name="vf_email" maxlength="90" size="30" value="{email}" class="campo_texto">
+                    </div></td>
+                </tr>
+                <tr>
+                  <td height="5" nowrap></td>
+                  <td height="5" nowrap></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo">
+            <td align="center"><input name="otro" type="submit" class="boton" id="otro" value="Aceptar">
+              <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="profesor_listado.php?">
+              <input name="idi" type="hidden" id="idi" value="{idi}"> </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td> 
+              <div align="center">{firma} </div> </td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

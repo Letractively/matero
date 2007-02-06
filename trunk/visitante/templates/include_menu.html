@@ -1,0 +1,36 @@
+<script language="javascript">
+function ventanita(id_catedra)
+{
+	var top = (screen.height - 300)/  2;
+	var left = (screen.width - 500)/  2;
+	
+	window.open("sindicarse.php?id_catedra="+id_catedra, "Sindicacion" , "width=500,top=" + top+",left="+left+",height=300,scrollbars=YES,toolbar=NO"); 
+}
+
+
+</script>
+<table width="102%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="15%" background="imagenes/fondoclaro.gif" height="491" valign="top"> 
+      <!-- BEGIN bloquemenu -->
+      <br> <p>{link_novedades}</p>
+      <p>{link_objetivos}</p>
+      <p>{link_plan}</p>
+      <p>{link_clases}</p>
+      <p>{link_integrantes}</p>
+      <p>{link_biblio}</p>
+      <p>{link_apuntes}</p>
+      <p>{link_repositorio}</p>
+      <p>{link_tps}</p>
+      <p>{link_parciales}</p>
+      <p>{link_final}</p>
+      <p>{link_link}</p>
+	  <p>{link_consulta}</p>
+	  <br /> <a href=
+	  "javascript: ventanita({id_catedra});"><img  style="padding-left:20px; padding-top:2px" title="Sindicarse a las novedades" border="0" src="imagenes/atom.jpg" /></a>
+      <p>{firma}</p>
+	  
+      <!-- END bloquemenu -->
+    </td>
+  </tr>
+</table>

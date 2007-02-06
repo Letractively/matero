@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Lista de Usuarios</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+
+<body>
+<br>
+<table width="100%" border="0" height="100%" align="center">
+  <tr>
+    <td> 
+      <form name="form1" method="post" action="usuario_eliminar.php">
+        <table width="60%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="600" border="0" cellspacing="2" align="center">
+          <tr> 
+            <td> 
+              <table width="100%" align="center" class="tabla_titulo">
+                <tr> 
+                  <td align="center" width="94%" height="12"> <b><font size="2" face="Arial, Helvetica, sans-serif"><b>Lista 
+                    de Usuarios</b></font></b> </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td> 
+              <div align="center"> 
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabla_cuerpo">
+                  <tr> 
+                    <td width="29%">Usuario</td>
+                    <td colspan=5>Operaciones:</td>
+                  </tr>
+                  <!-- BEGIN listausuarios -->
+                  <tr class={estilo}> 
+                    <td width="29%"><a href="usuario_mostrar.php?idu={idu}" class="link_azul">{usuario}</a></td>
+                    <td width="17%"><a href="usuario_modif.php?idu={idu}" class="link_azul">Modificar 
+                      </a></td>
+                    <td width="16%"><a href="pass_modif.php?idu={idu}" class="link_azul">Cambiar 
+                      Pass</a></td>
+                    <td width="23%">
+                      <div align="center"><a href="usuarios_asociar.php?idu={idu}" class="link_azul">Asociar 
+                        C&aacute;tedras</a></div>
+                    </td>
+                    <td width="15%" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                      <div align="center"> 
+                        <input type="checkbox" name="vf_elim_{idu}" value="1">
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- END listausuarios -->
+                  <tr class={estilo}> 
+                    <td width="29%">&nbsp;</td>
+                    <td width="17%">&nbsp;</td>
+                    <td width="16%">&nbsp;</td>
+                    <td width="23%">&nbsp;</td>
+                    <td width="15%"> 
+                      <div align="center"> 
+                        <input type="submit" name="accion" value="Eliminar" class="boton">
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                  <input type="submit" name="vf_redirigir" value="Volver" class="boton">
+                  <input type="hidden" name="vf_donde_redirigir" value="menu.php?">
+              </div>
+            </td>
+          </tr>
+          <tr> 
+            <td> 
+              <table width="100%" align="center" class="firma">
+                <tr> 
+                  <td> 
+                    <div align="center">{firma}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <br>
+      <br>
+      <div align="center"></div>
+      
+      
+    </td>
+  </tr>
+</table>
+</body>
+</html>

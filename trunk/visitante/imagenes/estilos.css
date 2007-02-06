@@ -1,0 +1,37 @@
+
+
+.color_modulo_activo { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #009933; text-decoration: none; font-weight: normal }
+a.color_modulo_activo:HOVER { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #009933; text-decoration: underline; font-weight: normal }
+a.color_modulo_activo { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #009933; text-decoration: none; font-weight: normal }
+
+.texto {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000}
+.texto_tit {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold}
+ body {  color: #000000; background-color: #FFFFFF; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.p_nivel {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal}
+.p_nivel_active{font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #009900; text-decoration: none; font-weight: bold}
+.s_nivel {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none; font-weight: normal; clip:         rect(   )}
+.s_nivel_active{font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none; font-weight: bold; clip:       rect(   )}h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #009900}
+h2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #009900}
+h3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #009900}
+p {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000}
+ul {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000}
+u {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; font-weight: normal}
+table {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000}
+td {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000}
+.p_nivel:HOVER { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: underline; font-weight: normal }
+.p_nivel:ACTIVE { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal }
+.p_nivel:LINK { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal }
+.s_nivel:ACTIVE { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none; font-weight: normal}
+.s_nivel:HOVER{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: underline; font-weight: normal}
+.s_nivel:LINK { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #000000; text-decoration: none; font-weight: normal}
+.s_niveld{padding:0em 0em 0em 1.3em}
+.barra { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal }
+.barra:HOVER { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: underline; font-weight: normal }
+.barra:ACTIVE { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal}
+.barra:LINK { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal }
+.bodytext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; text-decoration: none}
+.t_nivel{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal}
+.t_nivel:HOVER { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: underline; font-weight: normal}
+.t_nivel:ACTIVE { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal }
+.t_nivel:LINK { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none; font-weight: normal}
+.t_niveld{padding:0em 0em 0em 1.7em}

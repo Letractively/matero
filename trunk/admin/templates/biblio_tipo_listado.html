@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>MaTero - Listado de Integrantes</title>
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="biblio_tipo__modificar.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="500" align="center" cellspacing="2">
+          <tr class="tabla_titulo"> 
+            <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Listado 
+                de Tipo de Bibliograf&iacute;a de la C&aacute;tedra</b></font> 
+              </div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td align="center"> <table width="97%" class="tabla_cuerpo">
+                <tr> 
+                  <td><div align="center"><strong>Tipos de Bibliograf&iacute;a</strong></div></td>
+                  <td><div align="center"></div></td>
+                  <td> <div align="center"><strong>Eliminar</strong></div></td>
+                </tr>
+                <!-- BEGIN tipo -->
+                <tr> 
+                  <td><div align="center">{nombre}</div></td>
+                  <td><div align="center"><a href="biblio_tipo_modif.php?idi={idi}" class=link_azul>modif.</a></div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="vf_elim_{idi}" value="1">
+                    </div></td>
+                </tr>
+                <!-- END tipo -->
+                <tr> 
+                  <td><div align="center"> 
+                      <input name="otro" type="submit" id="otro" class="boton" value="Agregar nuevo Tipo">
+                    </div></td>
+                  <td><div align="center"></div></td>
+                  <td><div align="center"> 
+                      <input name="eliminar" type="submit" id="eliminar"  class="boton" value="Eliminar" onclick="javascript:alert('ADVERTENCIA: se eliminará además automáticamente la bibliografía asociada al tipo que desea eliminar.');return confirmar_eliminar_boton('this','Estás seguro que quieres eliminar tipo de bibliografía de la materia?');">
+                    </div></td>
+                </tr>
+              </table> </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="28"> <div align="center">
+                <input name="vf_redirigir" type="submit" id="vf_redirigir2"  class="boton" value="Volver">
+                <input name="vf_donde_redirigir" type="hidden" id="vf_donde_redirigir2" value="menu.php?">
+              </div></td>
+          </tr>
+          <tr class="tabla_cuerpo">
+            <td><div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>
