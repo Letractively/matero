@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Datos de Usuario</title>
+
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+
+<body>
+<font face="Arial, Helvetica, sans-serif" size="2"> </font>
+<table width="100%" border="0" height="100%">
+  <tr>
+    <td height="22"><font face="Arial, Helvetica, sans-serif" size="2">
+      <!-- BEGIN datos -->
+      </font> <br>
+      <table width="80%" border="0" align="center" cellspacing="2">
+        <tr clas="tabla_titulo">
+          <td height="28"> 
+            <table width="100%" align="center" class="tabla_titulo">
+              <tr> 
+                <td align="center" width="93%" height="12"> <font size="2" face="Arial, Helvetica, sans-serif"><b>Datos 
+                  del usuario: {usuario}</b></font> </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="tabla_cuerpo">
+          <td> 
+            <div align="center">
+              <table width="400" class="tabla_cuerpo">
+                <tr>
+                  <td>
+                    <table width="100%" border="0" align="center" class="tabla_cuerpo" height="20">
+                      <tr  class="tabla_cuerpo"> 
+                        <td width="11%" class="tabla_cuerpo"> 
+                          <div align="left"><b>Apellido:</b></div>
+                        </td>
+                        <td width="89%" class="tabla_cuerpo"> {apellido} </td>
+                      </tr>
+                      <tr  class="tabla_cuerpo"> 
+                        <td width="11%" class="tabla_cuerpo"> 
+                          <div align="left"><b>Nombre:</b></div>
+                        </td>
+                        <td width="89%" class="tabla_cuerpo"> {nombre}</td>
+                      </tr>
+                      <tr  class="tabla_cuerpo"> 
+                        <td width="11%" class="tabla_cuerpo"> 
+                          <div align="left"><b>Nick:</b></div>
+                        </td>
+                        <td width="89%" class="tabla_cuerpo">{nick}</td>
+                      </tr>
+                      <tr  class="tabla_cuerpo"> 
+                        <td width="11%" class="tabla_cuerpo"> 
+                          <div align="left"><b>Mail:</b></div>
+                        </td>
+                        <td width="89%" class="tabla_cuerpo"> {email} </td>
+                      </tr>
+                    </table>
+                    <table width="401" align="center"  class="tabla_cuerpo">
+                      <tr> 
+                        <td> <b>C&aacute;tedras que administra:</b> 
+                          <table width="100%"  class="tabla_cuerpo">
+                            <!-- BEGIN bloque_catedra -->
+                            <tr> 
+                              <td width="24%">&nbsp;</td>
+                              <td width="76%">:: {catedra}</td>
+                            </tr>
+                            <!-- END bloque_catedra -->
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <form name="form1" method="post" action="usuarios_administrador.php">
+                <p> 
+                  <input type="submit" name="vf_redirigir" value="Volver" class="boton">
+                  <input type="hidden" name="vf_donde_redirigir" value="usuarios_administrador.php?">
+                </p>
+              </form>
+              <!-- END datos -->
+            </div>
+            <p></p>
+          </td>
+        </tr>
+        <tr class="tabla_cuerpo">
+          <td height="26">
+            <table width="60%" align="center" class="tabla1">
+              <tr> 
+                
+                <td > 
+                  <div align="center">{firma} 
+                  </div>
+                </td>
+                
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

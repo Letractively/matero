@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Mostrar C&aacute;tedras</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="102%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+		<form name="form1" method="get" action="catedras_hacer_alta.php">
+        <table width="453" height="194" align="center"  cellspacing="2">
+          <tr class="tabla_titulo"> 
+            <td  colspan="2"  align="center"> <strong>Datos C&aacute;tedra</strong></td>
+          </tr>
+          <tr> 
+            <td class="tabla_cuerpo" valign="top"> 
+              <!-- BEGIN bloque_datos_catedra -->
+              <br> <table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tr class="tabla_cuerpo"> 
+                  <td width="17%"><strong>nombre:</strong></td>
+                  <td width="83%">{nombre_catedra}</td>
+                </tr>
+                <tr class="tabla_cuerpo"> 
+                  <td width="17%"><strong>email:</strong></td>
+                  <td width="83%">{email} </td>
+                </tr>
+                <tr> 
+                  <td colspan="2" class="tabla_cuerpo"><strong>Carreras a la que 
+                    pertenece:</strong></td>
+                
+              </table>
+              <!-- END bloque_datos_catedra -->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <!-- BEGIN bloque_listado_carreras -->
+                <tr class="tabla_cuerpo"> 
+                  <td width="5%"></td>
+                  <td width="95%">::&nbsp;{nombre_carrera}</td>
+                </tr>
+                <!-- END bloque_listado_carreras -->
+              </table></td>
+          </tr>
+          <tr> 
+            <td class="tabla_cuerpo"> <div align="center"> 
+                <input type="submit" class="boton" name="vf_redirigir" value="volver">
+                <input type="hidden" class="boton" name="vf_donde_redirigir" value=catedras_administrar.php?>
+              </div></td>
+          </tr>
+          <tr> 
+            <td class="firma" height="21"> 
+              <div align="center">{firma}</div></td>
+          </tr>
+        </table>
+      </form>
+      
+    </td>
+  </tr>
+</table>
+</body>
+</html>

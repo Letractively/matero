@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>MaTero - Admin</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<SCRIPT language="javascript" src="../includes/fckeditor/fckeditor.js"></SCRIPT>
+</head>
+<body>
+<br>
+<!-- BEGIN bloque -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <div align="right"></div>
+      <form ENCTYPE="multipart/form-data" name="form1" method="post" action="objetivos_catedra_hacer_modif.php">
+        <table width="480"  cellspacing="2" align="center">
+          <tr class="cat_tabla_titulo"> 
+            <td  colspan="2"  align="center"> <strong>Objetivos de la c&aacute;tedra</strong></td>
+          </tr>
+          <tr> 
+            <td class="tabla_cuerpo" > <table width="100%" height="100%" border="0" cellpadding="2" cellspacing="0">
+                <tr> 
+                  <td height="7" colspan="2" nowrap class="cat_tabla_cuerpo"></td>
+                </tr>
+                <tr> 
+                  <td class="cat_tabla_cuerpo" width="15%"><strong>Contenido:</strong></td>
+                  <td class="cat_tabla_cuerpo" width="85%">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td colspan="2" class="cat_tabla_cuerpo"> <div align="center"></div>
+                    <div align="center"> 
+
+				<script type="text/javascript">
+				  var oFCKeditor = new FCKeditor( 'vf_objetivo',600,300, '', '{objetivo}' ) ;
+				  oFCKeditor.Create() ;
+				</script>				                    
+                    </div></td>
+                </tr>
+                <tr> 
+                  <td height="27" valign="top" class="cat_tabla_cuerpo"> <div align="left"><strong>&nbsp;Archivo:</strong> 
+                      &nbsp;</div></td>
+                  <td class="cat_tabla_cuerpo" height="27"> <p> 
+                      <input name="vf_archivo" type="file"  class="campo_texto" id="vf_archivo2" size="30" maxlength="200">
+                      <br>
+                    </p></tr>
+                <tr>
+                  <td height="27" valign="top" class="cat_tabla_cuerpo"><strong>Archivo 
+                    Seleccionado </strong></td>
+                  <td class="cat_tabla_cuerpo" height="27"> 
+                    <table width="100%">
+                      <tr class="cat_tabla_cuerpo">
+                        <td width="20%">{archivo}</td>
+                        <td><input name="vf_eliminar" type="checkbox" id="vf_eliminar2" value="1"> 
+                          &nbsp;Seleccione si desea eliminar archivo</td>
+                      </tr>
+                    </table>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td class="firma" height="18"> <div align="center">
+                <input type="submit" class="boton" name="Submit" value="Guardar Cambios">
+                &nbsp;&nbsp; 
+                <input name="vf_volver" type="submit" class="boton" id="vf_volver2" value="Volver">
+                <input name="vf_archivo_anterior" type="hidden" id="vf_archivo_anterior" value="{archivo_anterior}">
+              </div></td>
+          </tr>
+          <tr> 
+            <td class="firma" height="18"> <div align="center">{firma}</div></td>
+          </tr>
+        </table>
+        <br>
+      </form>
+    </td>
+  </tr>
+</table>
+<!-- END bloque-->
+</body>
+</html>

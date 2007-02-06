@@ -1,0 +1,86 @@
+<!-- BEGIN datos -->
+<html>
+<head>
+<title>Modificaci&oacute;n de Password de Usuario</title>
+
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%" align="center">
+  <tr> 
+    <td><br>
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="80%" border="0" align="center" cellspacing="2">
+        <tr> 
+          <td> 
+            <table width="80%" align="center" class="tabla1" height="20">
+              <tr class="tabla_titulo"> 
+                <td align="center" width="93%" height="12"> <font size="2" face="Arial, Helvetica, sans-serif"><b>Modificaci&oacute;n 
+                  de Password de Usuario</b></font> </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="80%" border="0" cellspacing="0" cellpadding="0" class="tabla_cuerpo" align="center">
+              <tr align="left" valign="top"> 
+                <td height="80"> 
+                  <div align="center"> 
+                    <form name="form1" method="post" action="pass_hacer_modif.php">
+                      <table width="38%" border="0" class="tabla_cuerpo">
+                        <tr> 
+                          <td width="67%">Password Nueva:</td>
+                          <td width="33%"> 
+                            <input type="password" name="vf_passnueva" maxlength="60" size="15" value="{vf_passnueva}" class="campo_texto">
+                          </td>
+                        </tr>
+                        <tr> 
+                          <td width="67%">Confirmaci&oacute;n:</td>
+                          <td width="33%"> 
+                            <input type="password" name="vf_confirmacion" maxlength="60" size="15" value="{vf_confirmacion}" class="campo_texto">
+                          </td>
+                        </tr>
+                      </table>
+                      <p> 
+                        <input type="submit" value="Modificar" name="modificar" class="boton">
+                        <input type="submit" name="vf_redirigir" value="Volver" class="boton">
+                        <input type="hidden" name="vf_donde_redirigir" value="usuarios_administrador.php?">
+                        <input type="hidden" name="idu" value="{idu}">
+                      </p>
+                    </form>
+                  </div>
+                  <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+                </td>
+              </tr>
+            </table>
+            <!-- END datos -->
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <table width="80%" align="center" class="tabla_cuerpo">
+              <tr> 
+                <td > 
+                  <div align="center"> {firma}</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <div align="center"></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

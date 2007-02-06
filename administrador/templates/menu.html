@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>MaTero</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+  <tr>
+    <td> 
+      <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" class="mensaje">
+        <tr> 
+          <td class="mensaje"> 
+            <div align="center">{mensaje} </div>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <table width="500"  cellspacing="2" align="center">
+        <tr class="tabla_titulo"> 
+          <td  colspan="2"  align="center"> Men&uacute; Principal</td>
+        </tr>
+        <tr> 
+          <td class="tabla_cuerpo"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td class="tabla_cuerpo"> <div align="center"><b>CATEDRAS</b></div></td>
+                <td class="tabla_cuerpo"> <div align="center"><b> USUARIOS</b></div></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td class="tabla_cuerpo"> <table width="100%" border="0" cellspacing="0" cellpadding="0" class="linkBlanco">
+              <tr> 
+                <td class="tabla_cuerpo">&nbsp;</td>
+                <td class="tabla_cuerpo">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="tabla_cuerpo"> <div align="center"><a href="catedras_alta.php" class="link_azul">Alta 
+                    C&aacute;tedras</a></div></td>
+                <td class="tabla_cuerpo"> <div align="center"><a href="usuario_alta.php" class="link_azul">Alta 
+                    usuarios</a></div></td>
+              </tr>
+              <tr> 
+                <td class="tabla_cuerpo"> <div align="center"><a href="catedras_administrar.php" class="link_azul">Administrar 
+                    C&aacute;tedras</a></div></td>
+                <td class="tabla_cuerpo"> <div align="center"><a href="usuarios_administrador.php" class="link_azul">Administrar 
+                    Usuarios</a></div></td>
+              </tr>
+              <tr> 
+                <td class="tabla_cuerpo">&nbsp;</td>
+                <td class="tabla_cuerpo">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td class="tabla_cuerpo"><a href="seleccion_archivo_bd.php" class="link_azul">Actualizar 
+                  BD de alumnos</a></td>
+                <td class="tabla_cuerpo"><a href="lista_correo.php" class="link_azul">Lista de Correo</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr><form name="form1" method="post" action="cerrar_sesion.php">
+          <td class="firma" height="18">
+              <div align="center">
+                <input type="submit" name="Submit" value="Cerrar Sesi&oacute;n" class=boton>
+              </div>
+            </td></form>
+        </tr>
+        <tr> 
+          <td class="firma" height="18"> <div align="center">{firma}</div></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

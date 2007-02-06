@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>MaTero - Listado de Integrantes</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+<link rel="stylesheet" href="../estilos/tooltip.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<SCRIPT language="javascript" src="../includes/tooltip.js"></SCRIPT>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="apuntes_opciones.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="600" align="center" cellspacing="2">
+          <tr class="tabla_titulo"> 
+            <td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Listado 
+                de Apuntes de la C&aacute;tedra</b></font> </div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td align="center"> <table width="97%" class="tabla_cuerpo">
+                <tr> 
+                  <td height="22"> <div align="center"><strong>Apuntes</strong></div></td>
+                  <td><div align="center"><strong>Fecha</strong></div></td>
+                  <td><div align="center"><strong>Modificar</strong></div></td>
+				  <td><div align="center"><strong>Pos</strong></div></td>
+                  <td><div align="center"><img src="img/informacion.jpg" onmouseover="ddrivetip('Si esta tildado el apunte será visible para los alumnos, de lo contrario quedará en el listado pero no será visible desde afuera')" ; onmouseout="hideddrivetip()" width="15"> <strong>Publicar</strong></div></td>
+                  <td> <div align="center"><strong>Eliminar</strong></div></td>
+                </tr>
+                <!-- BEGIN profe -->
+                <tr> 
+                  <td><div align="center">{titulo}</div></td>
+                  <td><div align="center">{fecha}</div></td>
+                  <td> <div align="center"><a href="apuntes_modificar.php?ida={ida}" class=link_azul>modif.</a></div></td>
+				  <td><div align="center"><strong><input name="vf_pos_{ida}" type="text" id="vf_pos_{ida}" value="{pos}" size="1">
+				        </strong></div></td>
+                  <td><div align="center">
+                      <input name="vf_pub_{ida}" type="checkbox" id="vf_pub_{ida}" value="1" {chek}>
+                    </div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="vf_elim_{ida}" value="1">
+                    </div></td>
+                </tr>
+                <!-- END profe -->
+                <tr> 
+                  <td><div align="center"> 
+                      <input name="boton" type="submit" id="boton" class="boton" value="Agregar otro apunte">
+                    </div></td>
+                  <td><div align="center"></div></td>
+                  <td><div align="center"> </div></td>
+				  <td><div align="center">
+                      <input name="boton" type="submit" id="boton"  class="boton" value="Actualizar">
+                    </div></td>
+                  <td><div align="center">
+                      <input name="boton" type="submit" id="boton" class="boton"  value="Publicar">
+                    </div></td>
+                  <td><div align="center"> 
+                      <input name="boton" type="submit" id="boton"  class="boton" value="Eliminar" onclick="javascript:return confirmar_eliminar_boton('this','Estás seguro que quieres eliminar los apuntes seleccionados?');">
+                    </div></td>
+                </tr>
+              </table> </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td height="28">
+<div align="center">
+<input name="vf_redirigir" type="submit" id="vf_redirigir2"  class="boton" value="Volver">
+                <input name="vf_donde_redirigir" type="hidden" id="vf_donde_redirigir2" value="menu.php?">
+                <input name="menu" type="hidden" id="menu" value="1">
+              </div>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo">
+            <td><div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

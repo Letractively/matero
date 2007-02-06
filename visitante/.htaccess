@@ -1,0 +1,2 @@
+RewriteEngine o
+RewriteRule matero/visitante/([_0-9a-z-]+)/ index.php?id_catedra=$1

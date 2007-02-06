@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>MaTero - Alta de trabajo pr&aacute;ctico</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<link rel="stylesheet" href="../estilos/tooltip.css" type="text/css">
+<script language="JavaScript" src="../includes/calendario/javascripts.js"></script>
+</head>
+<body>
+<SCRIPT language="javascript" src="../includes/tooltip.js"></SCRIPT>
+<br>
+<!-- BEGIN datos_tp -->
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> 
+      <form   ENCTYPE="multipart/form-data"  name="form1" method="post" action="tp2_hacer_alta.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="600" height="150" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Alta 
+                de Trabajo Pr&aacute;ctico</b></font></div></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td height="116" align="center" valign="middle"> 
+              <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="cat_tabla_cuerpo">
+                <tr> 
+                  <td height="40" colspan="2" > <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr class="cat_tabla_cuerpo"> 
+                        <td width="19%">&nbsp;Nombre TP:</td>
+                        <td width="37%">&nbsp; <input name="vf_nombre" type="text" value="{nombre}" size="25"> 
+                        </td>
+                        <td width="44%" valign="top" >Publicar TP: 
+                          <input name="vf_check_publicar" type="checkbox" value="1" {checked_examen}><img src="img/informacion.jpg" onMouseOver="ddrivetip('Si esta tildado el TP será visible para los alumnos, de lo contrario quedará en el listado de TP\'s pero no será visible desde afuera')" ; onMouseOut="hideddrivetip()" width="15"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td width="55%" height="38" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr class="cat_tabla_cuerpo"> 
+                        <td>Breve descripci&oacute;n:</td>
+                      </tr>
+                      <tr> 
+                        <td><div align="center"> 
+                            <textarea name="vf_descrip" cols="35" rows="4" >{descrip_tp}</textarea>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                  <td width="45%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr class="cat_tabla_cuerpo"> 
+                        <td>Seleccione la/s comisiones:</td>
+                      </tr>
+                      <tr>
+                        <td height="5" nowrap></td>
+                      </tr>
+                      <tr> 
+                        <td><div align="center">
+                            <select name="vf_list_id_comision[]" size="5" multiple class="boton" >
+                              <!-- BEGIN datos_comisiones -->
+                              <option value="{id_comision}" {selected{id_comision}}>{nombre_comision}</option>
+							<!-- END datos_comisiones -->							  
+                            </select>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="38" colspan="2" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr class="cat_tabla_cuerpo">
+                        <td><table width="100%" border="0">
+                            <tr> 
+                              <td height="5" colspan="2" nowrap></td>
+                            </tr>
+                            <tr class="cat_tabla_cuerpo"> 
+                              <td colspan="2" valign="top">Fecha y hora de la 
+                                entrega del trabajo pr&aacute;ctico: </td>
+                            </tr>
+                            <tr class="cat_tabla_cuerpo"> 
+                              <td height="5" colspan="2" nowrap></td>
+                            </tr>
+                            <tr class="cat_tabla_cuerpo"> 
+                              <td width="72%"><div align="center"><a href="javascript:muestraCalendario('','form1','vf_dia','vf_mes','vf_anio')"><img src="almanaque.gif" border=0 align="absmiddle"></a> 
+                                  <input name="vf_dia" type="text" size="2" value={dia}  class="boton">
+                                  / 
+                                  <select name="vf_mes" id="vf_mes" class="boton">
+                                    <option value="0"  {selected_mes0}>mes</option>
+                                    <option value="1"  {selected_mes1}>enero</option>
+                                    <option value="2"  {selected_mes2}>febrero</option>
+                                    <option value="3"  {selected_mes3}>marzo</option>
+                                    <option value="4"  {selected_mes4}>abril</option>
+                                    <option value="5"  {selected_mes5}>mayo</option>
+                                    <option value="6"  {selected_mes6}>junio</option>
+                                    <option value="7"  {selected_mes7}>julio</option>
+                                    <option value="8"  {selected_mes8}>agosto</option>
+                                    <option value="9"  {selected_mes9}>setiembre</option>
+                                    <option value="10" {selected_mes10}>octubre</option>
+                                    <option value="11" {selected_mes11}>noviembre</option>
+                                    <option value="12" {selected_mes12}>diciembre</option>
+                                  </select>
+                                  / 
+                                  <input name="vf_anio" type="text" id="vf_anio" size="4" value={anio} class="boton">
+                                  &nbsp;- &nbsp; 
+                                  <input name="vf_hora" type="text" size="2" maxlength="2" class="boton" value={hora}>
+                                  : 
+                                  <input name="vf_minutos" type="text" size="2" maxlength="2" class="boton" value={min}>
+                                  hs</div></td>
+                              <td width="28%"><input name="vf_sin_fecha" type="checkbox" value="none" {checked_sin_fecha}>
+                                sin fecha </td>
+                            </tr>
+                            <tr class="cat_tabla_cuerpo">
+                              <td height="5" colspan="2" nowrap></td>
+                            </tr>
+                            <tr class="cat_tabla_cuerpo"> 
+                              <td colspan="2">&nbsp;Archivo: <input name="vf_archivo" type="file" class="boton"></td>
+                            </tr>
+                          </table></td>
+                      </tr>
+                      <tr class="cat_tabla_cuerpo"> 
+                        <td width="10%">&nbsp;Comentario para el listado de notas:</td>
+                      </tr>
+                      <tr class="cat_tabla_cuerpo"> 
+                        <td><div align="center"> 
+                            <textarea name="vf_comentario_notas" cols="50" rows="2">{comentario_notas}</textarea>
+                          </div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr> 
+                  <td height="3" nowrap></td>
+                  <td height="3" nowrap></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo">
+            <td align="center"><input name="otro" type="submit" class="boton" id="otro" value="Guardar">
+              <input type="submit" value="Volver" name="vf_redirigir" class="boton">
+              <input type="hidden" name="vf_donde_redirigir" value="menu.php?"> 
+            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td> 
+              <div align="center">{firma} </div> </td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos_tp -->
+       
+</body>
+</html>

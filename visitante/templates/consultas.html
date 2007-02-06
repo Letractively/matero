@@ -1,0 +1,67 @@
+<table width="100%" height="94%" cellpadding="0" cellspacing="0" border="0">
+  <tr> 
+    <td width="1">&nbsp;</td>
+    <td width="12">&nbsp;</td>
+    <td width="754" height="427" valign="top"> <br> <h2 align="left">Consultas 
+        de la c&aacute;tedra </h2>
+      
+        
+      <div align="center"> <a href="index.php?id_catedra={idc}&ver=consultas_altas.php&vf_tema={vf_tema}" class="barra"> 
+        Ingrese una nueva Consulta</a></div>
+      
+      <form name="form1" method="post" action="index.php?id_catedra={idc}&ver=consultas.php">
+        <p align="center"> Visualizar las consultas por temas: 
+          <select name="vf_id_tema" onChange="submit()">
+            <option value="0" selected>Seleccione un tema</option>
+            <!-- BEGIN bloquecomision -->
+            <option value="{valoropcion}"{selected}>{nombreopcion}</option>
+            <!-- END bloquecomision -->
+          </select>
+          <!-- BEGIN bloquecomentario1 -->
+        </p>
+        <p align="center">{mensaje}</p>
+        <p>{comentario1} </p>
+        <!-- END bloquecomentario1 -->
+        <!-- BEGIN bloqueconsulta -->
+        <table width="100%" border="0" align="center" cellpadding="4" cellspacing="1" >
+          <tr bgcolor="#CCCCCC" > 
+            <td valign="top" ><div align="center"><font size="2"><strong><u>Fecha 
+                de Consulta:</u></strong></font></div></td>
+            <td width="516" valign="top">{fecha_consulta}<font size="2"><strong></strong></font></td>
+          </tr>
+          <tr> 
+            <td width="415" valign="top"> <div align="center"><font size="2"><strong><u>Consulta:</u></strong></font></div></td>
+            <td valign="top"> <div align="left"> 
+                <div align="left"></div>
+                <div align="left"><strong> 
+                  <textarea cols="80" rows="3" readonly wrap="VIRTUAL">{consulta} </textarea>
+                  </strong></div>
+                <font size="2"><strong></strong></font></div>
+              <div align="left"></div></td>
+          </tr>
+          <tr> 
+            <td valign="top" > <div align="center"><font size="2"><strong><u>Fecha 
+                de Respuesta:</u></strong></font></div></td>
+            <td valign="top" >{fecha_respuesta}</td>
+          </tr>
+          <tr> 
+            <td valign="top"> <div align="center"><font size="2"><strong><u>Respuesta:</u></strong></font></div></td>
+            <td valign="top"><b> 
+              <textarea cols="80" rows="3" readonly wrap="VIRTUAL"  style="">{respuesta}</textarea>
+              </b></td>
+          </tr>
+          <tr> 
+            <th height="2" colspan="2" bgcolor="#CCCCCC"></th>
+          </tr>
+          <tr> 
+            <td colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+        <!-- END bloqueparcial -->
+        <!-- BEGIN bloquecomentario2 -->
+        {comentario2} 
+        <!-- END bloquecomentario2 -->
+        <input name="id_catedra" type="hidden" id="vf_catedra" value="{catedra}">
+      </form></td>
+  </tr>
+</table>

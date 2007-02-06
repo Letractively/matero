@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>MaTero -Listado de Alumnos</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <form name="form1" method="post" action="alumnos_hacer_administrar.php?vf_id_comision={id_comision}&vf_pag={vf_pag}">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="550" height="150" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"><div align="center"><b>Listado de Alumnos</b></div></td>
+          </tr>
+          <tr>
+            <td height="20" class="cat_tabla_cuerpo">
+<div align="center">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="51%" height="25" class="cat_tabla_cuerpo"> Comisiones: 
+                      <select class="lista_desplegable_comision" name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+                           {ocultar_listado} 
+                           <!-- BEGIN bloque_listado_comisiones -->
+                           <option value="alumnos_administrar.php?PHPSESSID={sesion}&vf_id_comision={id_comision}" {selected_comision}>{nombre_comision}</option>
+                           <!-- END bloque_listado_comisiones -->
+							{ocultar_listado1}
+                    </select>
+                    </td>
+                    <td width="49%" height="25" class="cat_tabla_cuerpo"> 
+                      <div align="right">{paginado}</div></td>
+                  </tr>
+                </table>
+              </div>
+              </td>
+          </tr>
+          <tr > 
+            <td>
+			<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="cat_tabla_cuerpo" height="6"> 
+                  <td width="8%" height="6"></td>
+                  <td width="19%" height="6"></td>
+                  <td width="32%" height="6"></td>
+                  <td width="27%" height="6"></td>
+                  <td width="14%" height="6"></td>
+                </tr>				
+                <tr class="cat_tabla_cuerpo"> 
+                  <td width="8%"> <div align="center"><strong><a href="alumnos_administrar.php?ordenar=id_alumno&ord={ord}&vf_id_comision={id_comision}">LU</a></strong></div></td>
+                  <td width="19%"> <div align="center"><strong><a href="alumnos_administrar.php?ordenar=apellido&ord={ord}&vf_id_comision={id_comision}">Apellido</a></strong></div></td>
+                  <td width="32%"> <div align="center"><strong>Nombre</strong></div></td>
+                  <td width="27%"> <div align="center"><strong>E-mail</strong></div></td>
+                  <td width="14%"> <div align="center"><strong>Eliminar</strong></div></td>
+                </tr>
+                <tr class="cat_tabla_cuerpo" height="8"> 
+                  <td height="6"></td>
+                  <td height="6"></td>
+                  <td height="6"></td>
+                  <td height="6"></td>
+                  <td height="6"></td>
+                </tr>
+                <!-- BEGIN bloque_listado -->
+                {bloque} 
+                <!-- END bloque_listado -->
+				{ocultar_botones}
+                <tr class="cat_tabla_cuerpo" height="30"> 
+                  <td colspan="3" class="cat_tabla_cuerpo"> <div align="center"><a class=link_verde 
+            		      href="javascript://" onClick="window.open('alumnos_imprimir.php?PHPSESSID={sesion}&vf_id_comision={id_comision}','listadoalumnos','width=600, height=430, top=5, left=150, toolbar=no,location=no,status=no,menubar=yes,scrollbars=yes, resizable=no')">Vista 
+                      de impresi&oacute;n</a> </div></td>
+                  <td width="27%"><div align="center"> 
+                      <input name="vf_actualizar" type="submit" class="boton" value="Actualizar e-mail's">
+                    </div></td>
+                  <td width="14%"> <div align="center"> 
+                      <input name="vf_elim" type="submit" value="Elim" class="boton" onclick="javascript:return confirmar_eliminar_boton('this','Estás seguro que quieres eliminar alumnos de la comisión?');">
+                    </div></td>
+                </tr>
+				{ocultar_botones1}
+               </table></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td align="center"> &nbsp; <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="menu.php?"> 
+            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td > 
+              <div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        </form>
+
+    </td>
+  </tr>
+</table>
+      </body>
+</html>

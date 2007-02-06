@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>MaTero -Listado de Alumnos</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <form name="form1" method="post" action="examen_parcial_hacer_pasar_notas.php?vf_id_comision={id_comision}&vf_id_examen_parcial={id_examen_parcial}">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="650" height="150" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"><div align="center"><b>PASAR NOTAS: {nombre_comision} 
+                - Parcial: {nombre_examen} </b></div></td>
+          </tr>
+          <tr>
+            <td height="20" class="cat_tabla_cuerpo">
+<div align="center"></div>
+              <div align="right"><A class=link_verde 
+            		      href="javascript://" onclick="window.open('examen_parcial_imprimir.php?vf_id_comision={id_comision}&PHPSESSID={sesion}&vf_id_examen_parcial={id_examen_parcial}','listadoalumnos','width=600, height=430, top=5, left=150, toolbar=no,location=no,status=no,menubar=yes,scrollbars=yes, resizable=no')">Vista de impresi&oacute;n</a></div></td>
+          </tr>
+          <tr > 
+            <td> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="cat_tabla_cuerpo" height="6"> 
+                  <td width="10%" height="6"></td>
+                  <td width="27%" height="6"></td>
+                  <td width="19%" height="6"></td>
+                  <td width="16%" height="6"></td>
+                  <td width="28%" height="6"></td>
+                </tr>
+                <tr class="cat_tabla_cuerpo"> 
+                  <td width="10%"> <div align="center"><strong><a href="examen_parcial_pasar_notas.php?vf_id_examen_parcial={id_examen_parcial}&ord={orde}&ordenar=id_alumno">LU</a></strong></div></td>
+                  <td width="27%"> <div align="center"><strong><a href="examen_parcial_pasar_notas.php?vf_id_examen_parcial={id_examen_parcial}&ord={orde}&ordenar=apellido">Apellido</a></strong></div></td>
+                  <td width="19%"> <div align="center"><strong>Nombre</strong></div></td>
+                  <td> <div align="center"><strong>Nota</strong></div></td>
+                  <td width="28%"> <div align="center"><strong>Comentario</strong></div></td>
+                </tr>
+                <!-- BEGIN bloque_listado -->
+                <tr class="cat_tabla_cuerpo"> 
+                  <td><div align="center">{lu}</div></td>
+                  <td><div align="center">{apellido}</div></td>
+                  <td><div align="center">{nombre}</div></td>
+                  <td><div align="center"> 
+                      <input name="vf_nota{lu}" type="text" class="campo_texto" value="{nota}" size="10">
+                    </div></td>
+                  <td><div align="center"> 
+                      <input name="vf_comentario{lu}" type="text" value="{comentario}" size="20" class="campo_texto">
+                    </div></td>
+                </tr>
+                <!-- END bloque_listado -->
+                <tr class="cat_tabla_cuerpo" height="8"> 
+                  <td width="10%" height="8"></td>
+                  <td width="27%" height="8"></td>
+                  <td width="19%" height="8"></td>
+                  <td width="16%" height="8"></td>
+                  <td width="28%" height="8"></td>
+                </tr>
+                <tr class="cat_tabla_cuerpo" height="8"> 
+                  <td width="10%" height="8"></td>
+                  <td width="27%" height="8"></td>
+                  <td width="19%" height="8"></td>
+                  <td width="16%" height="8"></td>
+                  <td width="28%" height="8"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td align="center"> <input name="otro" type="submit" id="otro2" value="Actualizar notas" class="boton">
+              &nbsp; 
+              <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="examen_parcial_administrar.php?vf_id_comision={id_comision}&">
+              </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td> <div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      </body>
+</html>

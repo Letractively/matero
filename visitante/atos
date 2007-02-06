@@ -1,0 +1,54 @@
+
+       <h2 align="left">Consultas de la c&aacute;tedra </h2><form name="form1" method="post" action="../../admin/templates/consultas_hacer_alta.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+                        <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="51%" height="193" align="center" cellspacing="2">
+          <tr> 
+            <td class="tabla_titulo"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Alta 
+                de Consulta</b></font></div></td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td align="center" valign="top"> 
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="tabla_cuerpo">
+                <tr> 
+                  <td colspan="2"> <div align="center"></div>
+                    <div align="center"> 
+                      <select name="vf_tema">
+                        <option value="0" selected>::seleccione tema de la consulta::</option>
+                        {link}
+                      </select>
+                    </div></td>
+                </tr>
+                <tr> 
+                  <td width="20%"> <div align="left"><b>Consulta:</b></div></td>
+                  <td width="80%"> <div align="left"> 
+                      <textarea name="vf_consulta" cols="45" rows="5"  class="campo_texto" id="vf_consulta">{consulta}</textarea>
+                    </div></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td align="center"><input name="guardar" type="submit" class="boton" id="guardar" value="Aceptar"> 
+              <input name="otro" type="submit" class="boton" id="otro2" value="Guardar y Cargar Otro"> 
+              <input name="vf_volver" type="submit" class="boton" id="vf_volver" value="Volver"> 
+              <input type="hidden" name="vf_donde_redirigir" value="consultas_listado.php?"> 
+              <input name="vf_menu" type="hidden" id="vf_menu" value="{menu}">
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td> <div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      

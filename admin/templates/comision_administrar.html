@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>MaTero -Listado de Comisiones</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<link rel="stylesheet" href="../estilos/tooltip.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+<SCRIPT language=JavaScript1.2>
+<!--
+function verificar_activa(check_modificado,companiero){ 
+  if (check_modificado.checked == true)
+  		companiero.checked=1;
+}
+function verificar_publicar(check_modificado,companiero){ 
+  if (check_modificado.checked == false)
+  		companiero.checked=0;
+}
+
+//-->
+</script>
+</head>
+<body>
+<SCRIPT language="javascript" src="../includes/tooltip.js"></SCRIPT>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <form name="form1" method="post" action="comision_hacer_administrar.php">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="550" height="150" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"> <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><b>Listado 
+                de Comisiones</b></font></div></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr class="cat_tabla_cuerpo"> 
+                  <td width="30%"><div align="center"><strong>Nombre</strong></div></td>
+                  <td width="17%"><div align="center"><strong><a href="comision_administrar.php?ordenar=fecha_alta&ord={ord}">Fecha 
+                      Alta</a></strong></div></td>
+                  <td width="15%"><div align="center"><strong>Modificar</strong></div></td>
+                  <td width="14%"><div align="center"><strong>Eliminar</strong></div></td>
+                  <td width="14%"><div align="center"><strong><a href="comision_administrar.php?ordenar=publicar&ord={ord}">Publicar</a></strong> <img src="img/informacion.jpg" onMouseOver="ddrivetip('La comision puede estar <strong>Activa</strong>: podra ser utlizada desde esta vista (administrador)  o <strong>Publicada</strong>: Sera visible para los alumnos')" ; onMouseOut="hideddrivetip()" width="15"></div></td>
+                  <td width="10%"><div align="center"><strong><a href="comision_administrar.php?ordenar=activa&ord={ord}">Activa</a></strong></div></td>
+                </tr>
+                <!-- BEGIN bloque_listado -->
+                <tr class=cat_tabla_cuerpo> 
+                  <td><div align="center">{nombre}</div></td>
+                  <td><div align="center">{fecha_alta}</div></td>
+                  <td><div align="center"><a href="comision_modificar.php?idc={id_comision}" class="link_azul">modif</a></div></td>
+                  <td><div align="center"><a href="comision_eliminar.php?idc={id_comision}" class="link_azul" onClick="javascript:return confirmar_eliminar(this,'Estás seguro que quieres eliminar la comisión');">elim</a></div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="{nombre_check_publicar}" value="1"   onClick="JavaScript:verificar_activa(this,{nombre_check_activa});" {checked_publicar}>
+                    </div></td>
+                  <td><div align="center"> 
+                      <input type="checkbox" name="{nombre_check_activa}" value="1" onClick="JavaScript:verificar_publicar(this,{nombre_check_publicar});" {checked_activa}>
+                    </div></td>
+                </tr>
+                <!-- END bloque_listado -->
+              </table>            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo">
+            <td align="center"><input name="otro" type="submit" class="boton" id="otro" value="Actualizar">
+              &nbsp; 
+              <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="menu.php?"> 
+               </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td> 
+              <div align="center">{firma} </div> </td>
+          </tr>
+        </table>
+        </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      </body>
+</html>

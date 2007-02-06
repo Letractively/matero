@@ -1,0 +1,33 @@
+<!-- BEGIN main --><?xml version="1.0" encoding="iso-8859-1"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="xhtml">{titulo}</title>
+    <subtitle type="html">
+      Catedras de la FRSF por ATOM
+    </subtitle>
+    <updated></updated>
+    <id>http://www.frsf.utn.edu.ar/matero/visitante/atom.php?id_catedra={id_catedra}&#38;tipo={tipo}</id>
+    <link rel="alternate" type="text/html" href="http://www.frsf.utn.edu.ar/matero/visitante/atom.php?id_catedra={id_catedra}"/>
+    <link rel="self" type="application/atom+xml"
+     href="http://www.frsf.utn.edu.ar/matero/visitante/atom.php?id_catedra={id_catedra}&#38;tipo={tipo}"/>
+    <rights>Copyright (c) 2006 frsf</rights>
+    <generator uri="http://www.matero.com/" version="1.0">
+       Matero
+    </generator><!-- BEGIN entry -->    
+	<entry>
+	      <title type="html">{titulo_entry}</title>
+	      <id>{id}</id>
+	      <updated>{fecha}T00:00:00Z</updated>
+	      <published>{fecha}T00:00:00Z</published>
+	      <author>
+	        <name>Catedra: {nombre_catedra}</name>
+			<uri>http://www.frsf.utn.edu.ar/matero/visitante/index.php?id_catedra={id_catedra}</uri>
+	      </author>
+	       <link href="http://www.frsf.utn.edu.ar/matero/visitante/index.php?id_catedra={id_catedra}"/>
+	      <content type="html" xml:lang="en"
+	       xml:base="http://diveintomark.org/">
+	       {contenido}
+
+	      </content>
+	</entry><!-- END entry -->
+</feed>
+<!-- END main -->

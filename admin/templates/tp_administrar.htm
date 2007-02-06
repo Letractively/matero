@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>MaTero - Ex&aacute;menes parciales</title>
+<link rel="stylesheet" href="../estilos/admin.css" type="text/css">
+<script src="../includes/validacion.js" type="text/javascript" language="javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> 
+      <form name="form1" method="post" action="#">
+        <table width="70%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="650" height="200" align="center" cellspacing="2">
+          <tr> 
+            <td class="cat_tabla_titulo"><div align="center"><b>Listado de trabajos 
+                pr&aacute;cticos</b></div></td>
+          </tr>
+          <tr>
+            <td class="cat_tabla_cuerpo">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="51%" height="25" class="cat_tabla_cuerpo"> Comisiones: 
+                      <select class="lista_desplegable_comision" name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+                           {ocultar_listado} 
+                           <!-- BEGIN bloque_listado_comisiones -->
+                           <option value="examen_parcial_administrar.php?PHPSESSID={sesion}&vf_id_comision={id_comision}" {selected_comision}>{nombre_comision}</option>
+                           <!-- END bloque_listado_comisiones -->
+							{ocultar_listado1}
+                    </select>
+                    </td>
+                    <td width="49%" height="25" class="cat_tabla_cuerpo"> 
+                      <div align="right">{paginado}</div></td>
+                  </tr>
+                </table>
+			</td>
+          </tr>
+          <tr > 
+            <td> <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr class="cat_tabla_cuerpo" height="30"> 
+                  <td width="14%"> <div align="center"><strong><a href="examen_parcial_administrar.php?ordenar=fecha&ord={ord}&vf_id_comision={id_comision}">Fecha</a></strong></div></td>
+                  <td width="16%"> <div align="center"><strong><a href="examen_parcial_administrar.php?ordenar=nombre&ord={ord}&vf_id_comision={id_comision}">Parcial</a></strong></div></td>
+                  <td width="19%"> <div align="center"><strong>Pasar Notas</strong></div></td>
+                  <td width="11%"><div align="center"><strong>Modificar</strong></div></td>
+                  <td width="9%"> <div align="center"><strong>Eliminar</strong></div></td>
+                </tr>
+                <!-- BEGIN bloque_listado33 -->
+                {bloque}
+                <!-- END bloque_listado33 -->
+				{ocultar_botones}
+                <tr class="cat_tabla_cuerpo" height="30"> 
+                  <td height="20" colspan="2"> <div align="center"></div></td>
+                  <td width="19%" height="20"> <div align="center"> </div></td>
+                  <td width="11%" height="20">&nbsp;</td>
+                  <td width="9%" height="20"><div align="center"> 
+                      <input name="vf_elim" type="submit" value="Elim" class="boton" onclick="javascript:return confirmar_eliminar_boton('this','Estás seguro que quieres eliminar el exámen parcial para esta comisión');">
+                    </div></td>
+                </tr>
+				{ocultar_botones1}				
+                <tr class="cat_tabla_cuerpo" height="8"> 
+                  <td width="14%" height="8"></td>
+                  <td width="16%" height="8"></td>
+                  <td width="19%" height="8"></td>
+                  <td width="11%"></td>
+                  <td width="9%"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td height="20" align="center"> <input type="submit" value="Volver" name="vf_redirigir" class="boton"> 
+              <input type="hidden" name="vf_donde_redirigir" value="menu.php?"> 
+            </td>
+          </tr>
+          <tr class="cat_tabla_cuerpo"> 
+            <td height="20"> <div align="center">{firma} </div></td>
+          </tr>
+        </table>
+        </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      </body>
+</html>

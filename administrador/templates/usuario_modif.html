@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Modificaci&oacute;n de Usuario</title>
+<link rel="stylesheet" href="../estilos/administrador.css" type="text/css">
+</head>
+<body>
+<br>
+<table width="100%" border="0" height="100%">
+  <tr> 
+    <td> <br>
+      <!-- BEGIN datos -->
+      <form name="form1" method="post" action="usuario_hacer_modif.php">
+        <table width="60%" border="0" align="center" class="mensaje">
+          <tr>
+            <td>
+              <div align="center">{mensaje}</div>
+            </td>
+          </tr>
+        </table>
+        <table width="66%" align="center" cellspacing="2">
+          <tr> 
+            <td> 
+              <table width="100%" align="center" class="tabla_titulo">
+                <tr> 
+                  <td align="center" width="91%" height="12"> <font size="2" face="Arial, Helvetica, sans-serif"><b>Modificaci&oacute;n 
+                    de Usuario</b></font></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="tabla_cuerpo"> 
+            <td> 
+              <table width="42%" border="0" cellspacing="0" cellpadding="0" class="tabla_cuerpo" align="center">
+                <tr> 
+                  <td width="52%"><b>Nick:</b></td>
+                  <td width="48%"> 
+                    <input type="text" name="vf_nick" maxlength="15" size="30" value="{vf_nick}" class="campo_texto">
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="52%"><b>Apellido:</b></td>
+                  <td width="96%" colspan="2"> 
+                    <input type="text" name="vf_apellido" maxlength="80" size="30" value="{vf_apellido}" class="campo_texto">
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="52%"><b>Nombre:</b></td>
+                  <td width="96%" colspan="2"> 
+                    <input type="text" name="vf_nombre" maxlength="80" size="30" value="{vf_nombre}" class="campo_texto">
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="52%"><b>Password:</b></td>
+                  <td width="96%" colspan="2">&nbsp; </td>
+                </tr>
+                <tr> 
+                  <td width="52%"><b>E-mail:</b></td>
+                  <td width="96%" colspan="2"> 
+                    <input type="text" name="vf_email" maxlength="90" size="30" value="{vf_email}" class="campo_texto">
+                  </td>
+                </tr>
+              </table>
+              <p align="center"> 
+                <input type="submit" value="Modificar" name="alta" class="boton">
+                <input type="submit" value="Volver" name="vf_redirigir" class="boton">
+                <input type="hidden" name="vf_donde_redirigir" value="usuarios_administrador.php?">
+                <input type="hidden" name="idu" value="{idu}">
+              </p>
+            </td>
+          </tr>
+          <tr class="tabla_pie"> 
+            <td height="28"> 
+              <div align="center"> 
+                <table width="100%" border="0" class="firma">
+                  <tr> 
+                    <td> 
+                      <div align="center">{firma} </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p align="center">&nbsp;</p>
+      </form>
+      <p><font face="Arial, Helvetica, sans-serif" size="2"> </font></p>
+    </td>
+  </tr>
+</table>
+      <!-- END datos -->
+       
+    </body>
+</html>

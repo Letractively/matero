@@ -1,0 +1,60 @@
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="1">&nbsp;</td>
+		  <td width="10">&nbsp;</td>
+          <td height="100%" valign="top"> 
+            <br>
+            <h2>Trabajos Pr&aacute;cticos</h2>
+<form name="form1" method="post" action="index.php?id_catedra={idc}&ver=12">
+  <p align="center">Comision: 
+    <select name="id_comision" onChange="submit()">
+      <option value=0>Seleccione la Comisión</option>
+	  <!-- BEGIN bloquecomision -->
+      <option value="{valoropcion}"{selected}>{nombreopcion}</option>
+	  <!-- END bloquecomision -->
+    </select>
+  </p>
+  <!-- BEGIN bloquecomentario1 -->
+  <p align="center">{mensaje}</p>
+  {comentario1}
+  <!-- END bloquecomentario1 -->
+<!-- BEGIN bloquetp -->
+              
+        <table width="63%" border="0" align="center" cellpadding="4" cellspacing="1">
+          <tr> 
+            <td><strong>{titulo} </strong>{com}</td>
+            <td>{notas}</td>
+          </tr>
+          <tr> 
+            <td width="78%"><b>Fecha:</b> {fecha} {hora}</td>
+            <td width="22%"> <div align="left">{bajar}</div></td>
+          </tr>
+          <tr> 
+            <th height="2" colspan="2" bgcolor="#CCCCCC"></th>
+          </tr>
+          <tr> 
+            <td colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+			  <!-- END bloquetp -->
+<!-- BEGIN bloquecomentario2 -->
+  {comentario2}
+  <!-- END bloquecomentario2 -->
+</form>
+            <div align="center"> 
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </td>
+		  <td width="10">&nbsp;</td>
+        </tr>
+      </table>
