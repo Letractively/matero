@@ -19,13 +19,13 @@ ini_alter("session.use_trans_sid","1");
 getpost_ifset();
 
 session_start();
-
+$vs_id_catedra = $_SESSION['vs_id_catedra'];
 
 //Truco para hacer globales las variables por get y post con register_globals en off
-getpost_ifset();
+//getpost_ifset();
 
 // Si no esta el usuario logueado lo saca del sistema
-if ((!session_is_registered('logueado')) || ($logueado!=1)){
+if ( !$_SESSION['logueado'] || ($_SESSION['logueado']!=1)){
 
 
 session_unset();

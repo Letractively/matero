@@ -15,11 +15,12 @@
 include("seguridad_intranet.php");
 // cantidad de modulos en configuracion.php
 $vl_nro_modulos = count($vc_array_modulos);
-
-$vl_consulta=mysql_query("Select *
+$sql_modulos_listado = "Select *
                             from modulos
                             where id_catedra='$vs_id_catedra'
-                            ");
+                            ";
+//echo $sql_modulos_listado;							
+$vl_consulta=mysql_query($sql_modulos_listado);
 
 /*if (!mysql_num_rows($vl_consulta)){
                                       $vl_mensaje="ERROR: No existen modulos cargados";
@@ -70,12 +71,13 @@ if ($vl_otra_vez==1) {$vl_consulta=mysql_query("Select *
 */
 
         set_file("pagina","modulos_listado.html");
+
         while ($vl_fila=mysql_fetch_array($vl_consulta)){
-        set_var("titulo",$vc_array_modulos[$vl_fila[modulo]]);
-        set_var("idm",$vl_fila[id_modulo]);
-		if ($vl_fila[publicar]==1){ set_var("check","checked");}
-		else {set_var("check","");}
-        parse("profe","profe",true);
+			set_var("titulo",$vc_array_modulos[$vl_fila[modulo]]);
+			set_var("idm",$vl_fila[id_modulo]);
+			if ($vl_fila[publicar]==1){ set_var("check","checked");}
+			else {set_var("check","");}
+			parse("profe","profe",true);
         }
 //}
 

@@ -12,14 +12,22 @@
 *                Que falta Hacer:
 *       Validaciones que realiza:
 ************************************************************************/
+
 include("seguridad_intranet.php");
 
 set_file("pagina","catedra_seleccionar.html");
 
-$vl_consulta=mysql_query("Select *
+
+$id_usuario = $_SESSION[usuario_logueado];
+$sql = "Select *
                           from usuario_catedra, catedra
-                          where usuario_catedra.id_usuario=$usuario_logueado[id_usuario]
-                          and catedra.id_catedra=usuario_catedra.id_catedra");
+                          where usuario_catedra.id_usuario= $id_usuario
+                          and catedra.id_catedra=usuario_catedra.id_catedra";
+$vl_consulta=mysql_query($sql);
+
+//echo $sql;
+
+						  
 
 
 if(!mysql_num_rows($vl_consulta)){die("No tiene cátedras asignadas. Contacte al administrador de MaTero");}

@@ -18,6 +18,8 @@ include("../includes/fecha.php");
 
 $size_max_archivo_cont=3048576; //la utilizamos para validar el tamaño del archivo de contenido(1MB en bytes)
 
+$archivo = $_FILES['vf_archivo'];
+
 	$vl_error=0;
 	//Valido los datos
 	
@@ -33,22 +35,22 @@ $size_max_archivo_cont=3048576; //la utilizamos para validar el tamaño del archi
 	}
 	
 	// si el usuario eligió adjuntar archivo se fija que este no tenga tamaño 0
-if(($vf_archivo_name!="")&&($vf_archivo_size>$size_max_archivo_cont)){
+if(($archivo['name'] != "")&&($archivo['size'] > $size_max_archivo_cont)){
      $vl_mensaje_error = "Error: el archivo contenido debe ser menor a ".$size_max_archivo_cont." bytes";
      $vl_error = 1;
 
      }
 
 // si el usuario eligió adjuntar archivo se fija que este no tenga tamaño 0
-if( ($vf_archivo_name!="") && ($vf_archivo_size==0)){
-      $vl_mensaje_error = "El archivo $vf_archivo_name adjuntado tiene tamaño 0";
+if( ($archivo['name'] != "") && ($archivo['size'] == 0)){
+      $vl_mensaje_error = "El archivo {$archivo['name']} adjuntado tiene tamaño 0";
       $vl_error = 1;
 
       }
 
 // si el usuario eligió adjuntar archivo se fija que este se haya subido correctmente
 
-if (($vf_archivo_name!="")&&(!is_uploaded_file($vf_archivo))){
+if (($archivo['name'] != "")&&(!is_uploaded_file($archivo['tmp_name']))){
    $vl_mensaje_error=nl2br("Error al subir el archivo, intente nuevamente en unos instantes");
    $vl_error=1;
   }
@@ -145,8 +147,8 @@ if ($vl_error == 1) {
 	die();
 }
 
-if ($vf_archivo_name!=""){
-                $vl_archivo_nombre=str_replace(" ","_",$vf_archivo_name);
+if ($archivo['name'] != ""){
+                $vl_archivo_nombre=str_replace(" ","_",$archivo['name']);
         }
 else { $vl_archivo_nombre="";}
 
@@ -157,9 +159,9 @@ if ($vf_archivo_viejo!="" && $vf_eliminar=="1"){
 	$vl_update=",archivo=''";
 }
 
-if($vf_archivo_name!=""){
-  $vl_archivo_nombre=str_replace(" ","_",$vf_archivo_name);           
-  move_uploaded_file($vf_archivo,"../archivos/$vs_id_catedra/$vc_directorio_tps/$vf_id_tp/$vl_archivo_nombre");
+if($archivo['name'] != ""){
+  $vl_archivo_nombre=str_replace(" ","_",$archivo['name']);           
+  move_uploaded_file($archivo['tmp_name'],"../archivos/$vs_id_catedra/$vc_directorio_tps/$vf_id_tp/$vl_archivo_nombre");
   //Valido que el archivo este realmente en el directorio adecuado
   if(!is_file("../archivos/$vs_id_catedra/$vc_directorio_tps/$vf_id_tp/$vl_archivo_nombre")){
 	$vl_mensaje.="Advertencia: Se ha cargado el TP pero no se ha subido el ARCHIVO<br>";

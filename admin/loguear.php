@@ -21,13 +21,12 @@ getpost_ifset();
 
 if (!$conexion=conectar()){die("No se Conecto a la Base de Datos");}
 $a = $vf_nick;
-$vl_consulta_administrador=mysql_query("select *
+$sql = "select *
            from usuario
            where nick='$vf_nick'
-           and  pass=password('$vf_pass')");
+           and  pass=password('$vf_pass')";
+$vl_consulta_administrador=mysql_query($sql);
 
-
-echo $a;
 
 if (!mysql_num_rows($vl_consulta_administrador))  {
 header ("Location:index.php?mensaje=No pudo loguearse correctamente. Verifique su nick o contraseña.$a");
@@ -42,10 +41,11 @@ $ip_addr=$REMOTE_ADDR;
 ini_alter("session.use_cookies","0");
 session_start();
 
-$_SESSION['usuario_logueado'] = $usuario_logueado;
+$_SESSION['usuario_logueado'] = $usuario_logueado['id_usuario'];
 $_SESSION['logueado']=1;
 $_SESSION['ip_addr']=$ip_addr;
 
 $id=session_id();
+
 header("Location:catedra_seleccionar.php?PHPSESSID=$id");
 ?>

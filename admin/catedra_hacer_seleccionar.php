@@ -19,9 +19,10 @@ require_once '../includes/Log/Log.php';
 $conf = array('mode' => 0600, 'timeFormat' => '%X %x');
 $logger = &Log::singleton('file', 'user.log', 'ident', $conf);
 
+$id_usuario = $_SESSION[usuario_logueado];
 $usuario=mysql_query("select *
            from usuario
-           where id_usuario = $usuario_logueado[id_usuario]");
+           where id_usuario = $id_usuario");
 $usuario=mysql_fetch_array($usuario);
 		   
 $catedra=mysql_query("select *
@@ -32,7 +33,7 @@ $catedra=mysql_fetch_array($catedra);
 // compruevo que la càtedra pertenesca al usuario registrado
 $vl_consulta=mysql_query("Select *
                           from usuario_catedra
-                          where id_usuario=$usuario_logueado[id_usuario]
+                          where id_usuario=$id_usuario
                           and id_catedra=$idc");
 						  
 if(!mysql_num_rows($vl_consulta)){die("No le pertenece la cátedra a la que intenta acceder, HEY!!!");}
