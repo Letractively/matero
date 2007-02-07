@@ -14,8 +14,10 @@
 ************************************************************************/
 include("seguridad_intranet.php");
 
+
 $size_max_archivo_cont=3048576; //la utilizamos para validar el tamaño del archivo de contenido(1MB en bytes)
 
+$archivo = $_FILES['vf_archivo'];
 
 $vl_error=0;
 //Valido los datos
@@ -26,30 +28,26 @@ if (!is_alphanumeric($vf_titulo,2,200))
    {$vl_mensaje_error.="Se ha ingresado un título incorrecto<br>";
    $vl_error=1;
    }
-/*
-//Valido el apellido
-if (!is_alphanumeric($vf_comentario,2,200))
-   {$vl_mensaje_error.="Se ha ingresado un comentario incorrecto<br>";
-   $vl_error=1;
-   }
-*/
+
+
 // si el usuario eligió adjuntar archivo se fija que este no tenga tamaño 0
-if(($vf_archivo_name!="")&&($vf_archivo_size>$size_max_archivo_cont)){
+if(($archivo['name'] != "")&&($archivo['size'] > $size_max_archivo_cont)){
      $vl_mensaje_error = "Error: el archivo contenido debe ser menor a ".$size_max_archivo_cont." bytes";
      $vl_error = 1;
 
      }
 
+
 // si el usuario eligió adjuntar archivo se fija que este no tenga tamaño 0
-if( ($vf_archivo_name!="") && ($vf_archivo_size==0)){
-      $vl_mensaje_error = "El archivo $vf_archivo_name adjuntado tiene tamaño 0";
+if( ($archivo['name'] != "") && ($archivo['size'] == 0)){
+      $vl_mensaje_error = "El archivo {$archivo['name']} adjuntado tiene tamaño 0";
       $vl_error = 1;
 
       }
 
 // si el usuario eligió adjuntar archivo se fija que este se haya subido correctmente
 
-if (($vf_archivo_name!="")&&(!is_uploaded_file($vf_archivo))){
+if (($archivo['name'] != "")&&(!is_uploaded_file($archivo['tmp_name']))){
    $vl_mensaje_error=nl2br("Error al subir el archivo, intente nuevamente en unos instantes");
    $vl_error=1;
   }
@@ -68,15 +66,16 @@ pparse("pagina");
 die;
 }
 
+
+
                 // subo el archivo eligido
-if ($vf_archivo_name!=""){
-                $vl_archivo_nombre=str_replace(" ","_",$vf_archivo_name);
+if ($archivo['name'] != ""){
+                $vl_archivo_nombre=str_replace(" ","_",$archivo['name']);
 
         }
 
 else { $vl_archivo_nombre="";}
-
- $vl_update=("INSERT INTO apuntes (
+$sql = "INSERT INTO apuntes (
                                         id_apuntes,
                                         id_catedra,
                                         titulo,
@@ -92,26 +91,44 @@ else { $vl_archivo_nombre="";}
                                         '$vl_archivo_nombre',
                                         '1',
                                         now()
-                                        )");
+                                        )";
+
+
+
+
+
+ $vl_update=($sql);
 mysql_query($vl_update);
 
 $vl_id=mysql_insert_id();
 // creo los directorios para el apunte
-mkdir("../archivos/$vs_id_catedra/$vc_directorio_apuntes/$vl_id", 0777);
+
+$dir = "../archivos/$vs_id_catedra/$vc_directorio_apuntes/$vl_id";
+mkdir($dir, 0777);
+
+
 
             // subo el archivo elegido
-if ($vf_archivo_name!=""){
-                $vl_archivo_nombre=str_replace(" ","_",$vf_archivo_name);
-                move_uploaded_file($vf_archivo,"../archivos/$vs_id_catedra/$vc_directorio_apuntes/$vl_id/$vl_archivo_nombre");
-        }
+$dir_objetivo = "../archivos/$vs_id_catedra/$vc_directorio_apuntes/$vl_id/$vl_archivo_nombre";
 
+
+if ($archivo['name'] != ""){
+                $vl_archivo_nombre=str_replace(" ","_",$archivo['name']);
+                move_uploaded_file($archivo['tmp_name'],$dir_objetivo);
+}
 else { $vl_archivo_nombre="";}
+
 
 $vl_mensaje="El Apunte fue dado de alta exitosamente";
 if ($otro) {header("Location:apunte_alta.php?PHPSESSID=$PHPSESSID&mensaje=$vl_mensaje&menu=$vf_menu");  die;}
 
-header("Location:apuntes_listado.php?PHPSESSID=$PHPSESSID&mensaje=$vl_mensaje");
+//print_r($_FILES);
 
+
+header("Location:apuntes_listado.php?PHPSESSID=$PHPSESSID&mensaje=$vl_mensaje");
+die;
+/*
+*/
 
 
 ?>

@@ -33,6 +33,7 @@ set_var("mensaje","$mensaje");
 
 
 // busco la cátedra
+$vs_id_catedra = $_SESSION['vs_id_catedra'];
 $vl_consulta=mysql_query("Select *
                from catedra
                where id_catedra='$vs_id_catedra'");

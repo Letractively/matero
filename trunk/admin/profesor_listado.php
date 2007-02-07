@@ -14,9 +14,11 @@
 ************************************************************************/
 include("seguridad_intranet.php");
 
-$vl_consulta=mysql_query("Select *	
+$sql = "Select *	
 							from profesor
-							where id_catedra='$vs_id_catedra'");
+							where id_catedra='$vs_id_catedra'";
+$vl_consulta=mysql_query($sql);
+
 
 if (!mysql_num_rows($vl_consulta)){
 								$vl_mensaje="ERROR: No existen integrantes cargados";
