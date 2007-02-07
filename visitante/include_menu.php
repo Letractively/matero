@@ -28,7 +28,9 @@ set_file("pagina","include_menu.html");
 
 
 //Busco los modulos que tiene publicados la pagina
-$modulos=mysql_query("select * from modulos where id_catedra='$id_catedra' order by modulo");
+$sql_modulos = "select * from modulos where id_catedra='$id_catedra' order by modulo";
+$modulos=mysql_query($sql_modulos);
+//echo $sql_modulos;
 
 //Recorro todos los modulos y en base a esto creo las variables $modulo$nroActivado y le asigno 1 o 0
 //por ejemplo $modulo1Activado=1 significa que se publica el plan de catedras y
