@@ -1,7 +1,11 @@
 <? 
 include('seguridad_intranet.php');
+
 //Obtengo los datos de la materia
-$consulta=mysql_query("select * from catedra where id_catedra=$id_catedra");
+$sql = "select * from catedra where id_catedra=$id_catedra";
+//echo $sql;
+
+$consulta=mysql_query($sql);
 $lacatedra=mysql_fetch_array($consulta);
 //Muestro los datos de la catedra
 $nombre=$lacatedra['nombre'];
