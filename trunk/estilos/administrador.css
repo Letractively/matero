@@ -1,0 +1,89 @@
+.tabla_titulo {
+               font-family: Verdana, Arial, Helvetica, sans-serif;
+               font-size:12px;
+               font-style: normal;
+               color: #003366;
+               background-color: #C0C0C0
+}
+
+.tabla_cuerpo{
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 10px;
+              font-style:normal;
+              color: #000000;
+              background-color: #FFFFFF
+}
+.tabla_cuerpo2{
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 10px;
+              font-style:normal;
+              color: #FCFED8;
+              background-color: #FFFFD9
+}
+.tabla_comision {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: bold;
+              color: #AA1234;
+              background-color: #FFFFDD
+}
+.tabla_titulo {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: bold;
+              color: #FFFFFF;
+              background-color: #FFC46A
+}
+
+body {
+              background-color: #CCCCCC
+}
+
+.tabla_pie {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight:  bold;
+            background-color: #FFFFFF
+}
+
+.firma {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: normal;
+        background-color:#FFFFFF
+}
+
+.mensaje {
+          font-family: Verdana, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+          color: #990000
+}
+
+A.link_azul {
+        FONT-SIZE: 11px; LINE-HEIGHT:1.5  ; COLOR: #003366; FONT-FAMILY: verdana; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.link_azul:hover {
+        FONT-SIZE: 11px; LINE-HEIGHT:1.5  ; COLOR: #003366; FONT-FAMILY: verdana; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+
+
+.boton{
+        FONT-SIZE: 7.5pt;
+        COLOR: #000000;
+        FONT-WEIGHT: bold;
+        FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+        background-color: #FFFFFF;
+}
+.campo_texto{
+        FONT-SIZE: 9.5pt;
+        COLOR: #000000;
+        FONT-WEIGHT: normal;
+        FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+        background-color: #FFFFFF;
+        border: 1px solid;
+        background-color: #FFFAE8;
+}
