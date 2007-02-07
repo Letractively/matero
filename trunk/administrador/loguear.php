@@ -12,9 +12,14 @@
 *                Que falta Hacer:
 *       Validaciones que realiza:
 ************************************************************************/
-
+session_start();
 include("../includes/configuracion.php");
 include("../includes/template.php");
+
+echo "ttttttttt";
+
+
+getpost_ifset();
 
 if (!$conexion=conectar()){die("No se Conecto a la Base de Datos");}
 
@@ -23,23 +28,24 @@ if (!$conexion=conectar()){die("No se Conecto a la Base de Datos");}
 header("Location:index.html");
       die();
 } */
-
-$vl_consulta_administrador=mysql_query("select *
+$sql = "select *
            from administrador
            where nick='$vf_nick'
-           and  pass=password('$vf_pass')");
+           and  pass=password('$vf_pass')";
+echo $sql;
+
+$vl_consulta_administrador=mysql_query($sql);
+
 
 if (!mysql_num_rows($vl_consulta_administrador))
  die(":-(");
 
-//$ip_addr=$REMOTE_ADDR;
-ini_alter("session.use_cookies","0");
-session_start();
-//session_register('ip_addr');
-$logueado=1;
-session_register('logueado');
-//session_register('usuario_logueado');
+
+$_SESSION['usuario_logueado'] = $usuario_logueado['id_usuario'];
+$_SESSION['logueado']=1;
+$_SESSION['ip_addr']=$ip_addr;
+
 $id=session_id();
-//header("Location:intranet.php3?PHPSESSID=$id");
+
 header("Location:menu.php?PHPSESSID=$id");
 ?>

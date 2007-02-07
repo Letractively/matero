@@ -12,6 +12,7 @@
 *                Que falta Hacer:
 *       Validaciones que realiza:
 ************************************************************************/
+session_start();
 include("seguridad_intranet.php");
 
 set_file("pagina","menu.html");
